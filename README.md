@@ -4,7 +4,7 @@ Welcome to Typist, here you can improve your IELTS writing skills with our speci
 
 ## Usage
 
-Getting started with Typist is easy. Simply visit the following URL to access the application: [https://kirillkagg.github.io/typist/](https://kirillkagg.github.io/typist/)
+Getting started with Typist is easy. Simply visit the following URL to access the application: [https://kirillkagg.github.io/IELTS-Writing/](https://kirillkagg.github.io/IELTS-Writing/)
 
 ## Technologies Used
 
