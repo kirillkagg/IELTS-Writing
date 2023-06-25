@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Writing</title>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/base.css" rel="stylesheet">
+      <link href="css/banner.css" rel="stylesheet">
+      <link href="css/navigation.css" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet">
+      <link href="css/item.css" rel="stylesheet">
+      <link href="css/instructions.css" rel="stylesheet">
+      <style>
+         .page {
+         display: none;
+         }
+         .page.active {
+         display: block;
+         }
+      </style>
+   </head>
+   <body style="background-color: #dbe5f5;">
+      <div id="page1" class="page active">
+         <div id="test-banner" style="background: linear-gradient(to top, #000 0%, #444d52 45%, #444d52 55%, #0f202d 100%); display: flex; align-items: center; justify-content: space-between;">
+            <p id="candidate" style="display: block; background-image: url(pictures/candidate-icon-16.png); margin: 0;">
+               <span class="candidate-name">XXXX XXXXXXX - </span>
+               <span class="candidate-number">123456</span>
+            </p>
+            <p id="timer" style="display: inline-block; background-image: url(pictures/timer-icon-16.png); color: #fff0bd; cursor: pointer; background-repeat: no-repeat; background-position: left center; padding-left: 20px; text-align: left; font-size: 1.5em; margin: 0;">
+               <span class="reader-only" id="timer-label"></span>
+               <span class="time-value">60</span>
+               <span class="time-text"> minutes left</span>
+            </p>
+            <div class="controls" style="text-align: right;">
+               <ul id="banner-controls" role="toolbar" style="display: inline-block; margin-bottom: 0; margin-top: 0;">
+                  <li class="floatingTool">
+                     <a href="#" class="settingsLink" style="display: none;">Settings</a>
+                  </li>
+                  <li class="floatingTool">
+                     <a class="helpLink" style="line-height: 1em;
+                        color: #050608;
+                        padding: 0.3em 1em;
+                        -moz-border-radius: 0.4em;
+                        border-radius: 0.4em;
+                        margin: 0 0.25em;
+                        cursor: pointer;
+                        background: -moz-linear-gradient(center top, #f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background: -webkit-linear-gradient(#f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background: linear-gradient(#f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background-color: #6AADE4;
+                        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+                        text-decoration: none;">Help<span style="background: url(pictures/help-icon.png) no-repeat center bottom; display: inline-block; width: 16px; height: 16px; margin-left: 0.5em;"></span>
+                     </a>
+                  </li>
+                  <li class="floatingTool">
+                     <a class="lockLink" style="line-height: 1em;
+                        color: #050608;
+                        padding: 0.3em 1em;
+                        -moz-border-radius: 0.4em;
+                        border-radius: 0.4em;
+                        margin: 0 0.25em;
+                        cursor: pointer;
+                        background: -moz-linear-gradient(center top, #f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background: -webkit-linear-gradient(#f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background: linear-gradient(#f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background-color: #6AADE4;
+                        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+                        text-decoration: none;">Hide</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div role="navigation" style="position: fixed; bottom: 0; z-index: 10; width: 100%;">
+            <h1 class="reader-only" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden; font-size: 1.65rem; margin-bottom: 0.5rem; font-family: inherit; font-weight: 500; line-height: 1.2; color: inherit; margin-top: 0; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px;">Navigation
+            </h1>
+            <div class="maximised" id="navigation-bar" style="border: 1px solid #fff; border-bottom: 0; padding-top: 0.5em; padding-left: 0.5em; padding-right: 0.5em; background: rgba(255, 255, 255, 0.25); border-radius: 0.5em 0.5em 0 0; box-shadow: 0 1px 3px rgba(0,0,0,0.5); position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; margin-left: 5.3em; margin-right: 8.3em;">
+               <div class="testPart" id="IELTAWCBFAMACW2019">
+                  <li class="assessmentSection" id="Sec2" style="position: relative; display: inline-block; vertical-align: middle; text-align: -webkit-match-parent; padding-right: 5px;">
+                     <span class="section-label" style="margin-right: 0.25em; border-top: 1px solid transparent; border-bottom: 1px solid transparent; line-height: 1.6em; font-weight: bold; display: inline; vertical-align: middle;">Part 1
+                     </span>
+                  <li class="assessmentItemRef" id="IELTAWCB-FAMACW1-0-0" style="position: relative; display: inline-block; padding-right: 5px; vertical-align: middle;">
+                     <a href="#page1" onclick="showPage('page1')" style="background-image: url(pictures/button-current.png); text-shadow: 0 0 2px #000, 0 0 2px #000; margin-bottom: 0.5em; border: 1px solid black; min-width: 1.6em; height: 1.6em; -moz-background-size: contain; background-size: contain; line-height: 1.6em; font-weight: bold; -moz-border-radius: 2px; border-radius: 2px; box-sizing: content-box; verflow: hidden; color: #fff; position: relative; display: inline-block; border-color: #34b2f1; background-color: #000; text-align: center; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); cursor: pointer;">
+                     <span class="question-label" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">Question</span>
+                     <span class="question-number">1</span>
+                     </a>
+                  </li>
+                  <li class="assessmentSection" id="Sec3" style="position: relative; display: inline-block; vertical-align: middle; padding-right: 5px;">
+                     <span class="section-label" style="margin-right: 0.25em; border-top: 1px solid transparent; border-bottom: 1px solid transparent; line-height: 1.6em; font-weight: bold; display: inline; vertical-align: middle;">Part 2</span>
+                  <li class="assessmentItemRef" id="IELTAWCB-FAMACW2-0-0" style="position: relative; display: inline-block; vertical-align: middle;">
+                     <a href="#page2" onclick="showPage('page2')" style="border-color: #34b2f1; background-image: url(pictures/button.png); text-shadow: 0 0 2px #000, 0 0 2px #000; margin-bottom: 0.5em; border: 1px solid black; min-width: 1.6em; height: 1.6em; -moz-background-size: contain; background-size: contain; line-height: 1.6em; font-weight: bold; -moz-border-radius: 2px; border-radius: 2px; box-sizing: content-box; verflow: hidden; color: #fff; position: relative; display: inline-block; background-color: #000; text-align: center; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); cursor: pointer;">
+                     <span class="question-label" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">Question</span>
+                     <span class="question-number">2</span>
+                     </a>
+                  </li>
+                  <div class="views" style="position: absolute; bottom: 3px; right: 3px;">
+                     <a title="switch view to navigation summary" class="minimise" style="background: url(pictures/iconMinimise.png) no-repeat left top; width: 28px; height: 28px; display: inline-block; vertical-align: middle; color: #007bff; text-decoration: none; cursor: pointer;">
+                     <span style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">navigation summary</span>
+                     </a>
+                     <a title="switch view to navigation details" class="maximise" style="background: url(pictures/iconMaximise.png) no-repeat left top;">
+                     <span style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">navigation details</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <label id="review-checkbox" style="display: block; position: absolute; left: 0.8em; bottom: 0.85em; font-size: 0.9em; margin-bottom: 0;">
+            <input type="checkbox" style="vertical-align: -0.15em; box-sizing: border-box; padding: 0;"/> Review
+            </label>
+            <a title="Previous Question" href="#" style="display: none; right: 56px; background-position: left bottom; position: absolute; bottom: 0; width: 56px; height: 56px; overflow: hidden; background: url(pictures/nav-buttons.png) no-repeat left top; color: #007bff; text-decoration: none;">
+            <span class="reader-only" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">Previous Question</span>
+            </a>
+            <a title="Next Question" href="#page2" onclick="showPage('page2')" style="right: 0; display: block; position: absolute; bottom: 0; width: 56px; height: 56px; overflow: hidden; background: url(pictures/nav-buttons.png) no-repeat left top; color: #007bff; text-decoration: none;">
+            <span class="reader-only" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">Next Question</span>
+            </a>
+         </div>
+         <div role="main" style="height: 884px" id="highlightable-content">
+            <div class="itemBody activeItem" style="position: relative; z-index: 1; padding: 0 0.429em; overflow-x: hidden;">
+               <div class="container" style="padding: 0 0.75em; margin: 0.857em 0.429em; border-radius: 0.357em; background-color: #dde3ee; background-image: -webkit-linear-gradient(top, #fff, #dde3ee); background-repeat: repeat-x; background-position: left top; box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.25);">
+                  <div class="rubricBlock" style="margin-bottom: 0; margin-top: 0; margin-left: -0.75em; margin-right: -0.75em; padding: 0.857em 0.75em; overflow: hidden; background-color: #fff; display: block;">
+                     <div>
+                        <div class="taskRubric cbview">
+                           <p>
+                              <strong>
+                              <span class="fs14pt" style="font-size: 1.322em; font-weight: bold;">Part 1</span>
+                              </strong>
+                              <br /><br />You should spend about 20 minutes on this task. Write at least 150 words.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div style="padding: 0 0.75em;">
+               <div class="container scroll-content" id="mainContent" style="padding-top: 12px; padding-bottom: 12px; padding-right: 0; padding-left: 0; border-radius: 0.357em; background-color: #dde3ee; background-image: -webkit-linear-gradient(top, #fff, #dde3ee); background-repeat: repeat-x; background-position: left top; box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.25);">
+                  <div class="container genericTwoColumn split-5050" style="box-sizing: border-box;">
+                     <div class="left" style="height: 750.004px; width: 50%; float: left; padding: 0 0.75em !important; overflow-y: auto !important; box-sizing: border-box; overflow: auto !important;">
+                        <div id="screenshotArea" style="height: 659.004px; box-sizing: border-box; width: 100%; padding: 10px; border-radius: 0.143em; background: #fff; margin-bottom: 1.714em; display: flex; justify-content: center; align-items: center; margin-top: 0.857em; margin-bottom: 1.714em;">
+                        </div>
+                        <input type="file" id="file-input" style="display: none;" accept="text/plain" onchange="loadFile()" />
+                        <div class="button-container" style="display: flex; justify-content: center;">
+                           <input type="submit" data-confirm="1" value="Upload Screenshot" class="button" style="padding: 0.3em 1em; text-decoration: none; font-weight: bold; color: #1e415b; cursor: pointer; text-shadow: 0 1px 1px rgba(255, 255, 255, 1); margin: auto; margin-bottom: 1em; border: 0; -moz-border-radius: 5px; border-radius: 5px; background: -webkit-linear-gradient(top, #f6f6f6, #bebcbd);" onclick="uploadScreenshot()" />
+                        </div>
+                     </div>
+                     <div class="right" style="width: 50%; float: right; padding: 0 0.75em !important; overflow-y: auto !important; box-sizing: border-box; overflow: auto !important;">
+                        <div class="presentation-fullHeight libs-itemtype-0038" style="display: block; margin-top: 0.857em; margin-bottom: 1.714em;">
+                           <textarea id="typing-text-left" cols="70" rows="6" style="height: 716.004px; font-size: 16px; box-sizing: border-box; width: 100%; resize: none; overflow-y: auto; padding: 10px; border: 1px solid #0370a7; border-radius: 0.143em; background: #fff;" autocomplete="off" spellcheck="false"></textarea>
+                           <span class="wordCount">Word count: <span id="wordCounterValue">0</span></span>
+                        </div>
+                     </div>
+                  </div>
+                  <canvas id="screenshot-canvas" style="display: none;"></canvas>
+               </div>
+               <script>
+                  function loadFile() {
+                     const fileInput = document.getElementById("file-input");
+                     const file = fileInput.files[0];
+                     const reader = new FileReader();
+
+                     reader.onload = function(e) {
+                        const textArea = document.getElementById("typing-text-left");
+                        textArea.value = e.target.result;
+                     };
+
+                     reader.readAsText(file);
+                  }
+
+                  function uploadScreenshot() {
+                     const screenshotArea = document.getElementById("screenshotArea");
+                     const canvas = document.createElement("canvas");
+                     const ctx = canvas.getContext("2d");
+
+                     const input = document.createElement("input");
+                     input.type = "file";
+                     input.accept = "image/png";
+
+                     input.addEventListener("change", function() {
+                        const file = this.files[0];
+                        const img = new Image();
+                        img.onload = function() {
+                           const maxWidth = screenshotArea.clientWidth - 20; // Subtract padding
+                           const maxHeight = screenshotArea.clientHeight - 20; // Subtract padding
+                           let width = img.width;
+                           let height = img.height;
+
+                           if (width > maxWidth) {
+                              height *= maxWidth / width;
+                              width = maxWidth;
+                           }
+
+                           if (height > maxHeight) {
+                              width *= maxHeight / height;
+                              height = maxHeight;
+                           }
+
+                           canvas.width = width;
+                           canvas.height = height;
+
+                           ctx.drawImage(img, 0, 0, width, height);
+
+                           screenshotArea.innerHTML = ""; // Clear existing content
+                           screenshotArea.appendChild(canvas); // Append the canvas to the screenshotArea
+                        };
+                        img.src = URL.createObjectURL(file);
+                     });
+
+                     input.click();
+                  }
+               </script>
+               <script>
+                  var typingTextLeft = document.getElementById("typing-text-left");
+                  var wordCounterValue = document.getElementById("wordCounterValue");
+
+                  typingTextLeft.addEventListener("input", function() {
+                  var words = typingTextLeft.value.trim().split(/\s+/);
+                  wordCounterValue.textContent = words.length;
+                  });
+               </script>
+            </div>
+         </div>
+      </div>
+      <div id="page2" class="page">
+         <div id="test-banner" style="background: linear-gradient(to top, #000 0%, #444d52 45%, #444d52 55%, #0f202d 100%); display: flex; align-items: center; justify-content: space-between;">
+            <p id="candidate" style="display: block; background-image: url(pictures/candidate-icon-16.png); margin: 0;">
+               <span class="candidate-name">XXXX XXXXXXX - </span>
+               <span class="candidate-number">123456</span>
+            </p>
+            <p id="timer" style="display: inline-block; background-image: url(pictures/timer-icon-16.png); color: #fff0bd; cursor: pointer; background-repeat: no-repeat; background-position: left center; padding-left: 20px; text-align: left; font-size: 1.5em; margin: 0;">
+               <span class="reader-only" id="timer-label"></span>
+               <span class="time-value">60</span>
+               <span class="time-text"> minutes left</span>
+            </p>
+            <div class="controls" style="text-align: right;">
+               <ul id="banner-controls" role="toolbar" style="display: inline-block; margin-bottom: 0; margin-top: 0;">
+                  <li class="floatingTool">
+                     <a href="#" class="settingsLink" style="display: none;">Settings</a>
+                  </li>
+                  <li class="floatingTool">
+                     <a class="helpLink" style="line-height: 1em;
+                        color: #050608;
+                        padding: 0.3em 1em;
+                        -moz-border-radius: 0.4em;
+                        border-radius: 0.4em;
+                        margin: 0 0.25em;
+                        cursor: pointer;
+                        background: -moz-linear-gradient(center top, #f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background: -webkit-linear-gradient(#f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background: linear-gradient(#f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background-color: #6AADE4;
+                        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+                        text-decoration: none;">Help<span style="background: url(pictures/help-icon.png) no-repeat center bottom; display: inline-block; width: 16px; height: 16px; margin-left: 0.5em;"></span>
+                     </a>
+                  </li>
+                  <li class="floatingTool">
+                     <a class="lockLink" style="line-height: 1em;
+                        color: #050608;
+                        padding: 0.3em 1em;
+                        -moz-border-radius: 0.4em;
+                        border-radius: 0.4em;
+                        margin: 0 0.25em;
+                        cursor: pointer;
+                        background: -moz-linear-gradient(center top, #f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background: -webkit-linear-gradient(#f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background: linear-gradient(#f9fafe 20%, #a4abb2 100%) repeat scroll 0 0 transparent;
+                        background-color: #6AADE4;
+                        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 0 2px rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.29);
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+                        text-decoration: none;">Hide</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div role="navigation" style="position: fixed; bottom: 0; z-index: 10; width: 100%;">
+            <h1 class="reader-only" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden; font-size: 1.65rem; margin-bottom: 0.5rem; font-family: inherit; font-weight: 500; line-height: 1.2; color: inherit; margin-top: 0; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px;">Navigation</h1>
+            <div class="maximised" id="navigation-bar" style="border: 1px solid #fff; border-bottom: 0; padding-top: 0.5em; padding-left: 0.5em; padding-right: 0.5em; background: rgba(255, 255, 255, 0.25); border-radius: 0.5em 0.5em 0 0; box-shadow: 0 1px 3px rgba(0,0,0,0.5); position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; margin-left: 5.3em; margin-right: 8.3em;">
+               <div class="testPart" id="IELTAWCBFAMACW2019">
+                  <li class="assessmentSection" id="Sec2" style="position: relative; display: inline-block; vertical-align: middle; text-align: -webkit-match-parent; padding-right: 5px;">
+                     <span class="section-label" style="margin-right: 0.25em; border-top: 1px solid transparent; border-bottom: 1px solid transparent; line-height: 1.6em; font-weight: bold; display: inline; vertical-align: middle;">Part 1</span>
+                  <li class="assessmentItemRef" id="IELTAWCB-FAMACW1-0-0" style="position: relative; display: inline-block; padding-right: 5px; vertical-align: middle;">
+                     <a href="#page1" onclick="showPage('page1')" style="border-color: #34b2f1; background-image: url(pictures/button.png); text-shadow: 0 0 2px #000, 0 0 2px #000; margin-bottom: 0.5em; border: 1px solid black; min-width: 1.6em; height: 1.6em; -moz-background-size: contain; background-size: contain; line-height: 1.6em; font-weight: bold; -moz-border-radius: 2px; border-radius: 2px; box-sizing: content-box; verflow: hidden; color: #fff; position: relative; display: inline-block; background-color: #000; text-align: center; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); cursor: pointer;">
+                     <span class="question-label" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">Question </span>
+                     <span class="question-number">1</span>
+                     </a>
+                  </li>
+                  <li class="assessmentSection" id="Sec3" style="position: relative; display: inline-block; vertical-align: middle; padding-right: 5px;">
+                     <span class="section-label" style="margin-right: 0.25em; border-top: 1px solid transparent; border-bottom: 1px solid transparent; line-height: 1.6em; font-weight: bold; display: inline; vertical-align: middle;">Part 2</span>
+                  <li class="assessmentItemRef" id="IELTAWCB-FAMACW2-0-0" style="position: relative; display: inline-block; vertical-align: middle;">
+                     <a href="#page2" onclick="showPage('page2')" style="background-image: url(pictures/button-current.png); text-shadow: 0 0 2px #000, 0 0 2px #000; margin-bottom: 0.5em; border: 1px solid black; min-width: 1.6em; height: 1.6em; -moz-background-size: contain; background-size: contain; line-height: 1.6em; font-weight: bold; -moz-border-radius: 2px; border-radius: 2px; box-sizing: content-box; verflow: hidden; color: #fff; position: relative; display: inline-block; border-color: #34b2f1; background-color: #000; text-align: center; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); cursor: pointer;">
+                     <span class="question-label" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">Question </span>
+                     <span class="question-number">2</span>
+                     </a>
+                  </li>
+                  <div class="views" style="position: absolute; bottom: 3px; right: 3px;">
+                     <a title="switch view to navigation summary" class="minimise" style="background: url(pictures/iconMinimise.png) no-repeat left top; width: 28px; height: 28px; display: inline-block; vertical-align: middle; color: #007bff; text-decoration: none; cursor: pointer;">
+                     <span style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">navigation summary</span>
+                     </a>
+                     <a title="switch view to navigation details" class="maximise" style="background: url(pictures/iconMaximise.png) no-repeat left top;">
+                     <span style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">navigation details</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <label id="review-checkbox" style="display: block; position: absolute; left: 0.8em; bottom: 0.85em; font-size: 0.9em; margin-bottom: 0;">
+            <input type="checkbox" style="vertical-align: -0.15em; box-sizing: border-box; padding: 0;"/> Review
+            </label>
+            <a title="Previous Question" href="#page1" onclick="showPage('page1')" style="display: block; right: 56px; background-position: left bottom; position: absolute; bottom: 0; width: 56px; height: 56px; overflow: hidden; background: url(pictures/nav-buttons.png) no-repeat left top; color: #007bff; transform: rotate(180deg); text-decoration: none;">
+            <span class="reader-only" style="position: absolute; display: block; top: auto; left: -100000px; width: 1px; height: 1px; overflow: hidden;">Previous Question</span>
+            </a>
+         </div>
+         <div role="main" style="height: 884px" id="highlightable-content">
+            <div class="itemBody activeItem" style="position: relative; z-index: 1; padding: 0 0.429em; overflow-x: hidden;">
+               <div class="container" style="padding: 0 0.75em; margin: 0.857em 0.429em; border-radius: 0.357em; background-color: #dde3ee; background-image: -webkit-linear-gradient(top, #fff, #dde3ee); background-repeat: repeat-x; background-position: left top; box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.25);">
+                  <div class="rubricBlock" style="margin-bottom: 0; margin-top: 0; margin-left: -0.75em; margin-right: -0.75em; padding: 0.857em 0.75em; overflow: hidden; background-color: #fff; display: block;">
+                     <div>
+                        <div class="taskRubric cbview">
+                           <p><strong><span class="fs14pt" style="font-size: 1.322em; font-weight: bold;">Part 2</span></strong><br /><br />You should spend about 40 minutes on this task. Write at least 250 words.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div style="padding: 0 0.75em;">
+               <div class="container scroll-content" id="mainContent" style="padding-top: 12px; padding-bottom: 12px; padding-right: 0; padding-left: 0; border-radius: 0.357em; background-color: #dde3ee; background-image: -webkit-linear-gradient(top, #fff, #dde3ee); background-repeat: repeat-x; background-position: left top; box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.25); ">
+                  <div class="container genericTwoColumn split-5050" style="box-sizing: border-box; ">
+                     <div class="left" style="height: 750.004px; width: 50%; float: left; padding: 0 0.75em !important; overflow-y: auto !important; box-sizing: border-box; overflow: auto !important; margin-top: 12px;">
+                        <textarea id="textArea" cols="70" rows="10" style="height: 250.004px; font-size: 20px; box-sizing: border-box; width: 100%; resize: none; overflow-y: auto; padding: 10px; border: 1px solid #0370a7; border-radius: 0.143em; background: #fff;"></textarea>
+                        <div class="button-container" style="display: flex; justify-content: center;">
+                           <input type="submit" data-confirm="1" value="Paste" class="button" style="padding: 0.3em 1em; text-decoration: none; font-weight: bold; color: #1e415b; cursor: pointer; text-shadow: 0 1px 1px rgba(255, 255, 255, 1); margin: auto; margin-bottom: 1em; border: 0; -moz-border-radius: 5px; border-radius: 5px; background: -webkit-linear-gradient(top, #f6f6f6, #bebcbd);margin-top: 12px" onclick="pasteText()" />
+                        </div>
+                     </div>
+                     <div class="right" style="width: 50%; float: right; padding: 0 0.75em !important; overflow-y: auto !important; box-sizing: border-box; overflow: auto !important;">
+                        <div class="presentation-fullHeight libs-itemtype-0038" style="display: block; margin-top: 0.857em; margin-bottom: 1.714em;">
+                           <textarea id="customTextArea" cols="70" rows="6" style="height: 716.004px; font-size: 16px; box-sizing: border-box; width: 100%; resize: none; overflow-y: auto; padding: 10px; border: 1px solid #0370a7; border-radius: 0.143em; background: #fff;" autocomplete="off" spellcheck="false"></textarea>
+                           <span class="wordCount">Word count: <span id="customWordCounter">0</span></span>
+                        </div>
+                     </div>
+                     <script>
+                        function pasteText() {
+                          var textarea = document.getElementById("textArea");
+                          navigator.clipboard.readText()
+                            .then(text => {
+                              textarea.value = text;
+                            })
+                            .catch(error => {
+                              console.error('Error pasting text: ', error);
+                            });
+                        }
+                     </script>
+                     <script>
+                        var customTextArea = document.getElementById("customTextArea");
+                        var customWordCounter = document.getElementById("customWordCounter");
+
+                        customTextArea.addEventListener("input", function() {
+                           var words = customTextArea.value.trim().split(/\s+/);
+                           customWordCounter.textContent = words.length;
+                        });
+                     </script>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <script>
+            function showPage(pageId) {
+              var pages = document.getElementsByClassName("page");
+              for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove("active");
+              }
+
+              var pageToShow = document.getElementById(pageId);
+              if (pageToShow) {
+                pageToShow.classList.add("active");
+              }
+
+              // Scroll to the target section
+              var target = document.getElementById(pageId);
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
+
+            window.addEventListener('hashchange', function() {
+              var target = window.location.hash.substring(1);
+              showPage(target);
+            });
+
+            // Check if the URL contains a hash on page load
+            if (window.location.hash) {
+              var target = window.location.hash.substring(1);
+              showPage(target);
+            }
+         </script>
+         <script>
+     var typingText1 = document.getElementById("typing-text-left");
+     var typingText2 = document.getElementById("customTextArea");
+     var timerElement1 = document.getElementById('page1').querySelector('#timer');
+     var timerElement2 = document.getElementById('page2').querySelector('#timer');
+     var startTime;
+     var timerInterval;
+     var isHovered = false;
+
+     typingText1.addEventListener("input", function() {
+       if (!startTime) {
+         startTime = Date.now() + 61 * 60 * 1000; // Set the start time to 60 minutes from now
+         startTimer();
+       }
+     });
+
+     typingText2.addEventListener("input", function() {
+       if (!startTime) {
+         startTime = Date.now() + 61 * 60 * 1000; // Set the start time to 60 minutes from now
+         startTimer();
+       }
+     });
+
+     timerElement1.addEventListener("mouseover", function() {
+       isHovered = true;
+       updateTimer();
+     });
+
+     timerElement1.addEventListener("mouseout", function() {
+       isHovered = false;
+       updateTimer();
+     });
+
+     timerElement2.addEventListener("mouseover", function() {
+       isHovered = true;
+       updateTimer();
+     });
+
+     timerElement2.addEventListener("mouseout", function() {
+       isHovered = false;
+       updateTimer();
+     });
+
+     function startTimer() {
+       timerInterval = setInterval(updateTimer, 1000);
+     }
+
+     function updateTimer() {
+       var currentTime = Date.now();
+       var remainingTime = startTime - currentTime;
+
+       if (remainingTime <= 0) {
+         clearInterval(timerInterval);
+         timerElement1.textContent = "Time's up!";
+         timerElement2.textContent = "Time's up!";
+         typingText1.disabled = true;
+         typingText2.disabled = true;
+       } else {
+         var minutes = Math.floor(remainingTime / (60 * 1000));
+         var seconds = Math.floor((remainingTime % (60 * 1000)) / 1000);
+
+         if (isHovered && startTime) {
+           minutes = Math.max(0, minutes - 1);
+           seconds = Math.max(0, seconds - 1);
+
+           if (minutes === 0 && seconds === 0) {
+             timerElement1.textContent = "Time's up!";
+             timerElement2.textContent = "Time's up!";
+           } else {
+             var timeLeft = (minutes > 0 ? minutes + ":" : "") + padNumber(seconds);
+             timerElement1.textContent = timeLeft + " left";
+             timerElement2.textContent = timeLeft + " left";
+           }
+         } else {
+           if (minutes > 0 || startTime) {
+             timerElement1.textContent = minutes + " minutes left";
+             timerElement2.textContent = minutes + " minutes left";
+
+             if (minutes <= 10) {
+               timerElement1.style.color = "red";
+               timerElement2.style.color = "red";
+             } else {
+               timerElement1.style.color = ""; // Reset to default color
+               timerElement2.style.color = ""; // Reset to default color
+             }
+           } else {
+             timerElement1.textContent = "60 minutes left";
+             timerElement2.textContent = "60 minutes left";
+           }
+         }
+       }
+     }
+
+     function padNumber(number) {
+       return number.toString().padStart(2, "0");
+     }
+   </script>
+      </div>
+   </body>
+</html>

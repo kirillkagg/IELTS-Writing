@@ -1,0 +1,64 @@
+/* CSS rules specifically for accessibility. */
+
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace connect "http://connect.ucles.org.uk/ns/ConnectDeliveryEngine";
+
+/* Hidden from sighted users, but still announced by a screen reader. */
+.reader-only {
+    position: absolute;
+    display: block;
+    top: auto;
+    left: -100000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.dialogue-overlay {
+    background-color: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+	z-index: 100;
+}
+.hideScreen {
+    opacity: 1;	
+    background-color: #555;
+}
+
+.dialogue-wrapper {
+    overflow-x: hidden;
+	overflow-y:auto;
+    width: 100%;
+	height: 100%;
+}
+
+[connect|class~=accessibilityLink] {
+    float: right;
+    display: block;
+    -moz-border-radius: 0.75em;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 0.75em;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    line-height: 2.6em;
+    padding-right: 0.5em;
+    font-weight: bold;
+    font-size: 0.85em;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 16px;
+    border: solid #59a7e5 1px;
+    background-color: #fff;
+}
+
+[connect|class~=accessibilityLink] img {
+    margin: 0.3em;
+    display: block;
+    float: left;
+}
+

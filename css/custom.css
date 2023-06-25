@@ -1,0 +1,51 @@
+@namespace url("http://www.w3.org/1999/xhtml");
+@namespace connect url("http://connect.ucles.org.uk/ns/ConnectDeliveryEngine");
+table.theme-colour-1 tr, table[connect|author-class~="theme-colour-1"] tr { border-color: rgb(204, 204, 204); }
+table.theme-colour-1 th, table[connect|author-class~="theme-colour-1"] th { background-color: rgb(240, 240, 240); }
+table.theme-colour-1 th, table[connect|author-class~="theme-colour-1"] th, table.theme-colour-1 td, table[connect|author-class~="theme-colour-1"] td { border-color: rgb(204, 204, 204); color: rgb(51, 51, 51); }
+table.theme-colour-2 tr, table[connect|author-class~="theme-colour-2"] tr { border-color: rgb(170, 170, 170); }
+table.theme-colour-2 th, table[connect|author-class~="theme-colour-2"] th { border-color: rgb(170, 170, 170); color: rgb(255, 255, 255); background-color: rgb(243, 134, 48); }
+table.theme-colour-2 td, table[connect|author-class~="theme-colour-2"] td { border-color: rgb(170, 170, 170); color: rgb(51, 51, 51); }
+table.theme-colour-3 tr, table[connect|author-class~="theme-colour-3"] tr { border-color: rgb(153, 153, 153); }
+table.theme-colour-3 th, table[connect|author-class~="theme-colour-3"] th { border-color: rgb(153, 153, 153); color: rgb(255, 255, 255); background-color: rgb(38, 173, 228); }
+table.theme-colour-3 td, table[connect|author-class~="theme-colour-3"] td { border-color: rgb(153, 153, 153); color: rgb(51, 51, 51); background-color: rgb(247, 253, 250); }
+table.theme-colour-4 tr, table[connect|author-class~="theme-colour-4"] tr { border-color: rgb(170, 188, 254); }
+table.theme-colour-4 th, table[connect|author-class~="theme-colour-4"] th { border-color: rgb(170, 188, 254); color: rgb(0, 51, 153); background-color: rgb(185, 201, 254); }
+table.theme-colour-4 td, table[connect|author-class~="theme-colour-4"] td { border-color: rgb(170, 188, 254); color: rgb(102, 102, 153); background-color: rgb(232, 237, 255); }
+table.theme-colour-5 tr, table[connect|author-class~="theme-colour-5"] tr { border-color: rgb(187, 187, 187); }
+table.theme-colour-5 th, table[connect|author-class~="theme-colour-5"] th { border-color: rgb(187, 187, 187); color: rgb(73, 63, 63); background-color: rgb(157, 224, 173); }
+table.theme-colour-5 td, table[connect|author-class~="theme-colour-5"] td { border-color: rgb(187, 187, 187); color: rgb(89, 79, 79); background-color: rgb(224, 255, 235); }
+table.theme-border-1 th:not(.aux-cell), table.theme-border-1 td:not(.aux-cell), table[connect|author-class~="theme-border-1"] tr th, table[connect|author-class~="theme-border-1"] tr td { border-top-color: transparent ! important; border-bottom-color: transparent ! important; }
+table.theme-border-1 thead tr:not(.aux-row) th:not(.aux-cell), table.theme-border-1 tbody:first-child tr:nth-of-type(1) th:not(.aux-cell), .cts table.theme-border-1 tbody:first-child tr:nth-of-type(2) th, table[connect|author-class~="theme-border-1"] tr:nth-of-type(1) th, table[connect|author-class~="theme-border-1"] tbody:first-child tr:nth-of-type(1) th { border-top-color: inherit ! important; border-bottom-color: inherit ! important; }
+table.theme-border-1 tbody:nth-of-type(1) tr:nth-of-type(1) td:not(.aux-cell), table.theme-border-1 tbody:first-child tr:nth-of-type(1) td:not(.aux-cell), table[connect|author-class~="theme-border-1"] tbody:nth-of-type(1) tr:nth-of-type(1) td, table[connect|author-class~="theme-border-1"] tbody:first-child tr:nth-of-type(1) td { border-top-color: inherit ! important; }
+table.theme-border-1 tr:not(.aux-row) th:last-of-type, table.theme-border-1 tr:not(.aux-row) td:last-of-type, table[connect|author-class~="theme-border-1"] tr th:last-of-type, table[connect|author-class~="theme-border-1"] tr td:last-of-type { border-right-color: transparent ! important; }
+table.theme-border-1 tr:not(.aux-row) th:nth-of-type(1), table.theme-border-1 tbody tr:not(.aux-row) td:nth-child(1), .cts table.theme-border-1 tr:not(.aux-row) th:nth-of-type(2), .cts table.theme-border-1 tbody tr:not(.aux-row) td:nth-child(2), table[connect|author-class~="theme-border-1"] tr th:nth-of-type(1), table[connect|author-class~="theme-border-1"] tbody tr td:nth-child(1) { border-left-color: transparent ! important; }
+table.theme-border-1 tbody tr:last-of-type th:not(.aux-cell), table.theme-border-1 tbody tr:last-of-type td, table[connect|author-class~="theme-border-1"] tbody tr:last-of-type th, table[connect|author-class~="theme-border-1"] tbody tr:last-of-type td { border-bottom-color: inherit ! important; }
+table.theme-border-2 th:not(.aux-cell), table.theme-border-2 td:not(.aux-cell), table[connect|author-class~="theme-border-2"] th, table[connect|author-class~="theme-border-2"] td { border-left-color: transparent ! important; border-right-color: transparent ! important; border-top-color: inherit ! important; border-bottom-color: inherit ! important; }
+table.theme-border-3 tr:not(.aux-row) th:not(.aux-cell), table.theme-border-3 tr:not(.aux-row) td:not(.aux-cell), table[connect|author-class~="theme-border-3"] tr th, table[connect|author-class~="theme-border-3"] tr td { border-color: transparent; }
+table.theme-border-3 tr:not(.aux-row) th:last-of-type, table.theme-border-3 tr:not(.aux-row) td:last-of-type, table[connect|author-class~="theme-border-3"] tr th:last-of-type, table[connect|author-class~="theme-border-3"] tr td:last-of-type { border-right-color: inherit ! important; }
+table.theme-border-3 tr:not(.aux-row) th:nth-of-type(2), table.theme-border-3 tbody tr:not(.aux-row) td:nth-child(1), .cts table.theme-border-3 tbody tr:not(.aux-row) td:nth-child(2), table[connect|author-class~="theme-border-3"] tr th:nth-of-type(1), table[connect|author-class~="theme-border-3"] tbody tr td:nth-child(1) { border-left-color: inherit ! important; }
+table.theme-border-3 tr:not(.aux-row) th:not(.aux-cell), table.theme-border-3 tbody:first-child tr:nth-of-type(1) td:not(.aux-cell), .cts table.theme-border-3 tbody:first-child tr:nth-of-type(2) td, table[connect|author-class~="theme-border-3"] tr:nth-of-type(1) th, table[connect|author-class~="theme-border-3"] tbody:first-child tr:nth-of-type(1) td { border-top-color: inherit ! important; }
+table.theme-border-3 tbody tr:last-of-type th:not(.aux-cell), table.theme-border-3 tbody tr:last-of-type td, table[connect|author-class~="theme-border-3"] tbody tr:last-of-type th, table[connect|author-class~="theme-border-3"] tbody tr:last-of-type td { border-bottom-color: inherit ! important; }
+table.theme-border-4 tr:not(.aux-row) th:not(.aux-cell), table.theme-border-4 tr:not(.aux-row) td:not(.aux-cell), table[connect|author-class~="theme-border-4"] tr th, table[connect|author-class~="theme-border-4"] tr td { border-color: transparent ! important; }
+
+table.theme-colour-1.theme-alternate-rows tr:nth-child(2n) td, table[connect|author-class~="theme-colour-1"][connect|author-class~="theme-alternate-rows"] tr:nth-child(2n) td { background-color: rgb(249, 249, 249); }
+body:not(.cts) table.theme-colour-1.theme-alternate-cols tr td:nth-child(2n), .cts table.theme-colour-1.theme-alternate-cols tr td:nth-child(2n+1), table[connect|author-class~="theme-colour-1"][connect|author-class~="theme-alternate-cols"] tr td:nth-child(2n) { background-color: rgb(249, 249, 249); }
+
+table.theme-colour-2.theme-alternate-rows tr:nth-child(2n) td, table[connect|author-class~="theme-colour-2"][connect|author-class~="theme-alternate-rows"] tr:nth-child(2n) td { background-color: rgb(252, 251, 227); }
+body:not(.cts) table.theme-colour-2.theme-alternate-cols tr td:nth-child(2n), .cts table.theme-colour-2.theme-alternate-cols tr td:nth-child(2n+1), table[connect|author-class~="theme-colour-2"][connect|author-class~="theme-alternate-cols"] tr td:nth-child(2n) { background-color: rgb(252, 251, 227); }
+
+table.theme-colour-3.theme-alternate-rows tr:nth-child(2n) td, table[connect|author-class~="theme-colour-3"][connect|author-class~="theme-alternate-rows"] tr:nth-child(2n) td { background-color: rgb(210, 228, 252); }
+body:not(.cts) table.theme-colour-3.theme-alternate-cols tr td:nth-child(2n), .cts table.theme-colour-3.theme-alternate-cols tr td:nth-child(2n+1), table[connect|author-class~="theme-colour-3"][connect|author-class~="theme-alternate-cols"] tr td:nth-child(2n) { background-color: rgb(210, 228, 252); }
+
+table.theme-colour-4.theme-alternate-rows tr:nth-child(2n) td, table[connect|author-class~="theme-colour-4"][connect|author-class~="theme-alternate-rows"] tr:nth-child(2n) td { background-color: rgb(210, 228, 252); }
+body:not(.cts) table.theme-colour-4.theme-alternate-cols tr td:nth-child(2n), .cts table.theme-colour-4.theme-alternate-cols tr td:nth-child(2n+1), table[connect|author-class~="theme-colour-4"][connect|author-class~="theme-alternate-cols"] tr td:nth-child(2n) { background-color: rgb(210, 228, 252); }
+
+table.theme-colour-5.theme-alternate-rows tr:nth-child(2n) td, table[connect|author-class~="theme-colour-5"][connect|author-class~="theme-alternate-rows"] tr:nth-child(2n) td { background-color: rgb(194, 255, 214); }
+body:not(.cts) table.theme-colour-5.theme-alternate-cols tr td:nth-child(2n), .cts table.theme-colour-5.theme-alternate-cols tr td:nth-child(2n+1), table[connect|author-class~="theme-colour-5"][connect|author-class~="theme-alternate-cols"] tr td:nth-child(2n) { background-color: rgb(194, 255, 214); }
+
+.cts-x1gBE, [connect|author-class~="cts-x1gBE"] { vertical-align: top; }
+.cts-valnB, [connect|author-class~="cts-valnB"] { vertical-align: middle; text-align: center; }
+.cts-T1AkA, [connect|author-class~="cts-T1AkA"] { vertical-align: middle; }
+.cts-JsCCN, [connect|author-class~="cts-JsCCN"] { text-align: left; vertical-align: middle; }
+.cts-HtZrv, [connect|author-class~="cts-HtZrv"] { text-align: left; vertical-align: top; }

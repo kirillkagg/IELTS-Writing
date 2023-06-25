@@ -1,0 +1,36 @@
+@namespace "http://www.w3.org/1999/xhtml";
+
+/* Reset most default properties. */
+* {
+    margin: 0;
+    border: 0;
+    font: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    text-decoration: inherit;
+    background: transparent;
+    color: inherit;
+    /*list-style-type: none;*/
+}
+
+/* Reset padding for everything except select, option.
+ * This rule would cause select boxes to break on Firefox. */
+:not(select):not(option) {
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.429em; /* 20px at font-size: 14px */
+	background-color:#fff;
+}
+
+body.visible {
+    background-color: #dbe5f5;
+}

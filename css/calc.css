@@ -1,0 +1,205 @@
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace connect "http://connect.ucles.org.uk/ns/ConnectDeliveryEngine";
+
+/* Reset
+-------------------------------------------------------------- */
+
+[connect|class~=itemBody] [connect|class~=calculator] form,
+[connect|class~=itemBody] [connect|class~=calculator] fieldset,
+[connect|class~=itemBody] [connect|class~=calculator] legend,
+[connect|class~=itemBody] [connect|class~=calculator] input,
+[connect|class~=itemBody] [connect|class~=calculator] button,
+[connect|class~=itemBody] [connect|class~=calculator] textarea {
+    margin:0;padding:0;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] fieldset {
+    border:0;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] optgroup {
+    font-style:inherit;font-weight:inherit;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] legend {
+    color:#000;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] input,
+[connect|class~=itemBody] [connect|class~=calculator] button,
+[connect|class~=itemBody] [connect|class~=calculator] textarea,
+[connect|class~=itemBody] [connect|class~=calculator] select,
+[connect|class~=itemBody] [connect|class~=calculator] optgroup,
+[connect|class~=itemBody] [connect|class~=calculator] option {
+    font-family:inherit;font-size:inherit;
+    font-style:inherit;font-weight:inherit;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] input,
+[connect|class~=itemBody] [connect|class~=calculator] button,
+[connect|class~=itemBody] [connect|class~=calculator] textarea,
+[connect|class~=itemBody] [connect|class~=calculator] select {
+    *font-size:100%;
+}
+
+/* Container
+-------------------------------------------------------------- */
+
+[connect|class~=itemBody] [connect|class~=calculator] {
+	width: 247px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Columns
+-------------------------------------------------------------- */
+
+[connect|class~=itemBody] [connect|class~=calculator] div.span-1,
+[connect|class~=itemBody] [connect|class~=calculator] div.span-2,
+[connect|class~=itemBody] [connect|class~=calculator] div.span-3,
+[connect|class~=itemBody] [connect|class~=calculator] div.span-4 {
+	float:left;
+	margin-right: 1px;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] div.last {
+    margin-right: 0; 
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .span-1 {
+    width: 61px;
+}
+    
+[connect|class~=itemBody] [connect|class~=calculator] .span-2 {
+    width: 123px;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .span-3 {
+    width: 185px;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .span-4, div.span-4 {
+	width: 247px;
+	margin: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .append-1 {
+    padding-right: 62px;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .append-2 {
+    padding-right: 124px;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .append-3 {
+    padding-right: 186px;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .prepend-1 {
+    padding-left: 62px;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .prepend-2 {
+    padding-left: 124px;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] .prepend-3 {
+    padding-left: 186px;
+}
+
+/* Calculator
+-------------------------------------------------------------- */
+
+[connect|class~=itemBody] [connect|class~=calculator], 
+[connect|class~=itemBody] [connect|class~=calculator] button, 
+[connect|class~=itemBody] [connect|class~=calculator] input {
+	border: 1px solid #000;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button, 
+[connect|class~=itemBody] [connect|class~=calculator] input, 
+[connect|class~=itemBody] [connect|class~=calculator] legend {
+    margin-bottom: 0.1em;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] {
+	z-index: 100;
+	overflow: hidden;
+	border: solid #989898 0.08333em;
+	font: bold 1.1em/1.5em Arial, Helvetica, sans-serif;
+	background-color: #cbcbcb;
+	background-image: -moz-linear-gradient(21% 95% 90deg, #CBCBCB, #E8E8E8, #E0E0E0 60%,#BFBFBF 90%);
+	background-image: linear-gradient(21% 95% 90deg, #CBCBCB, #E8E8E8, #E0E0E0 60%,#BFBFBF 90%);
+	-moz-box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.5);
+}
+
+[connect|class~=itemBody] [connect|class~=calculator],
+[connect|class~=itemBody] [connect|class~=calculator] input {
+    padding: 0.4em;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] legend {
+	font: bold 0.8em/1em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #787878;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button {
+    cursor: pointer;
+	 -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+	 box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button {
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button.digit {
+	background-color: #f2e5a5;
+	background-image: -moz-linear-gradient(19% 75% 90deg, #e5d99c, #fff1ad);
+	background-image: linear-gradient(19% 75% 90deg, #e5d99c, #fff1ad);
+    border-color:#736d4e;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button.clear {
+	background-color: #ff9fad;
+	background-image: -moz-linear-gradient(19% 75% 90deg, #e58e9b, #FF9FAD);
+	background-image: linear-gradient(19% 75% 90deg, #e58e9b, #FF9FAD);
+    border-color:#884856;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button.equals {
+	background-color: #c4e4a5;
+	background-image: -moz-linear-gradient(19% 75% 90deg, #adc991, #C4E4A5);
+	background-image: linear-gradient(19% 75% 90deg, #adc991, #C4E4A5);
+    border-color: #627A52;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button.operator {
+	background-color: #dbdbdb;
+	background-image: -moz-linear-gradient(19% 75% 90deg, #c2c2c2, #dbdbdb);
+	background-image: linear-gradient(19% 75% 90deg, #c2c2c2, #dbdbdb);
+    border-color: #5c5c5c;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button.point {
+	background-color: #fff;
+	background-image: -moz-linear-gradient(19% 75% 90deg, #E5E5E5, #fff);
+	background-image: linear-gradient(19% 75% 90deg, #E5E5E5, #fff);
+    border-color: #777;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] input {
+	width: 229px;
+	border: solid #aacae6 0.16666em;
+	background-color: #fff;
+	text-align: right;
+	letter-spacing: 0.2em;
+}
+
+[connect|class~=itemBody] [connect|class~=calculator] button:active {
+    background-image: -moz-linear-gradient(19% 75% 90deg, #d92332, #f32837);
+    background-image: linear-gradient(19% 75% 90deg, #d92332, #f32837);
+    border-color: #6C1119;
+}

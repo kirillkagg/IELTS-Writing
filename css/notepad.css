@@ -1,0 +1,91 @@
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace connect "http://connect.ucles.org.uk/ns/ConnectDeliveryEngine";
+
+/* Reset
+-------------------------------------------------------------- */
+
+[connect|class~=itemBody] [connect|class~=notepad] form,
+[connect|class~=itemBody] [connect|class~=notepad] fieldset,
+[connect|class~=itemBody] [connect|class~=notepad] legend,
+[connect|class~=itemBody] [connect|class~=notepad] input,
+[connect|class~=itemBody] [connect|class~=notepad] button,
+[connect|class~=itemBody] [connect|class~=notepad] textarea {
+    margin:0;padding:0;
+}
+
+[connect|class~=itemBody] [connect|class~=notepad] fieldset {
+    border:0;
+}
+
+[connect|class~=itemBody] [connect|class~=notepad] optgroup {
+    font-style:inherit;font-weight:inherit;
+}
+
+[connect|class~=itemBody] [connect|class~=notepad] legend {
+    color:#000;
+}
+
+[connect|class~=itemBody] [connect|class~=notepad] input,
+[connect|class~=itemBody] [connect|class~=notepad] button,
+[connect|class~=itemBody] [connect|class~=notepad] textarea,
+[connect|class~=itemBody] [connect|class~=notepad] select,
+[connect|class~=itemBody] [connect|class~=notepad] optgroup,
+[connect|class~=itemBody] [connect|class~=notepad] option {
+    font-family:inherit;font-size:inherit;
+    font-style:inherit;font-weight:inherit;
+}
+
+[connect|class~=itemBody] [connect|class~=notepad] input,
+[connect|class~=itemBody] [connect|class~=notepad] button,
+[connect|class~=itemBody] [connect|class~=notepad] textarea,
+[connect|class~=itemBody] [connect|class~=notepad] select {
+    *font-size:100%;
+}
+
+[connect|class~=itemBody]  div.popup,
+[connect|class~=itemBody]  div.popup h1 {
+    background-image: -moz-linear-gradient(top, #fffeef, #fff9bf);
+    background-image: linear-gradient(top, #fffeef, #fff9bf);
+}
+
+[connect|class~=itemBody]  div.popup h1 {
+	border-bottom-color: #c0c0c0;
+}
+[connect|class~=itemBody] div.popup p.attention {
+	font-size: 0.9em;
+	margin: 0.5em 0 0 0;
+	line-height: 1.5em;
+}
+
+[connect|class~=itemBody] [connect|class~=notepad] textarea{
+    border: 1px solid #999;
+    width: 100%;
+    background-color: #fff;
+	resize: none;
+}
+
+[connect|class~=itemBody] [connect|class~=notepad] {
+    width: 300px;
+    padding: 1em 0;
+}
+
+[connect|class~=itemBody] [connect|class~=notepad] input {
+    width: 229px;
+    border: solid #aacae6 0.16666em;
+    background-color: #fff;
+    text-align: right;
+    letter-spacing: 0.2em;
+}
+
+[connect|class~=itemBody] [connect|class~=bar]:hover {
+    cursor: -moz-grabbing;
+}
+
+[connect|class~=itemBody] [connect|class~=bar]  h1 {
+    -moz-border-radius: 0.357em 0.357em 0 0;
+	-moz-user-select:none;
+    border-radius: 0.357em 0.357em 0 0;
+	user-select:none;
+    margin: 0 -0.778em;
+}
+

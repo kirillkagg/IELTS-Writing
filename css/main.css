@@ -1,0 +1,265 @@
+@namespace "http://www.w3.org/1999/xhtml";
+
+[role=main] {
+    /*min-height: 508px;*/
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid transparent;
+    background-image: url("../images/background.png");
+    background-repeat: repeat-x;
+}
+
+.nontest hr { 
+	height:1px; 
+	margin:1em 0; 
+	background:#fff; 
+}
+
+.nontest em { font-weight:bold; }
+
+.nontest {
+	text-align: center;
+	font-size:1.1em;
+}
+
+.nontest p, .nontest ul, .nontest ol, .nontest dl, .nontest table { margin-bottom:1em; }
+
+table.details th {
+	padding-right:1em;
+	color:#454545;
+}
+
+/* common box styles */
+.box1, .box2 {
+	text-align:left;
+	width:50em;
+	margin:60px auto 10px auto;
+}
+
+.box1 .title, .box2 .title {
+	color:#fff;
+	padding:7px 12px;
+	font-weight:bold;
+	letter-spacing:0.05em;
+	-moz-border-radius-topleft: 0.75em;
+	-moz-border-radius-topright: 0.75em;
+	border-top-left-radius: 0.75em;
+	border-top-right-radius: 0.75em;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+	background: -moz-linear-gradient(top, #000, #444e54, #0f202d);
+	background: linear-gradient(top, #000, #444e54, #0f202d);
+	margin-bottom:3px;
+}
+
+.box1 .content, .box2 .content {
+	min-height:150px;
+	padding:12px;
+	border:1px solid #fff;
+	-moz-border-radius-bottomleft: 0.75em;
+	-moz-border-radius-bottomright: 0.75em;
+	border-bottom-left-radius: 0.75em;
+	border-bottom-right-radius: 0.75em;
+}
+
+/* non-test - transparent bg, dark header, no shadow */
+
+.box1 .content {
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.15));	
+	background: linear-gradient(top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.15));	
+}
+
+.box2 .content  {
+  background: -moz-linear-gradient(top, #e6eff3, #cddee8);
+  background: linear-gradient(top, #e6eff3, #cddee8);
+}
+
+/* assuming icon is image size 48x48 */
+.box1 .hasicon, .box2 .hasicon {
+	padding-left:70px;
+	position:relative;
+}
+
+.hasicon img {
+	position:absolute;	
+	top:-8px;
+	left:12px;
+}
+
+dl.access { 
+  margin-left: 4.5em;
+  width: 9.5em;
+	float: left; 
+}
+dl.access dt { 
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0.2em;
+}
+dl.access dd { 
+  font-weight: normal;
+}
+dl.access dd input{ 
+  margin-top: 0.35em;
+  vertical-align: top;
+}
+dl.access dd label { 
+  font-size: 0.9em;
+  padding-left: 0.1em;
+}
+
+/* buttons */
+.button {
+	background: -moz-linear-gradient(top, #f6f6f6, #bebcbd);
+	background: linear-gradient(top, #f6f6f6, #bebcbd);
+	padding:0.3em 1em;
+	text-decoration: none;
+	font-weight: bold;
+	color:#1e415b;
+	cursor: pointer;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+	margin:auto;
+	margin-bottom:1em;
+	-moz-border-radius: 5px;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.button:hover {
+	background: -moz-linear-gradient(top, #fff, #bebcbd);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+	background: linear-gradient(top, #fff, #bebcbd);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+.button:active { 
+	background: -moz-linear-gradient(top, #dedcdd, #fff); 
+	background: linear-gradient(top, #dedcdd, #fff); 
+}
+
+.button.green { display: block }
+
+.button.sound { 
+	background:-moz-linear-gradient(top, #f0f5f7, #adc2cd); 
+	background:linear-gradient(top, #f0f5f7, #adc2cd); 
+}
+.button.sound:hover { 
+	background:-moz-linear-gradient(top, #fff, #adc2cd); 
+	background:linear-gradient(top, #fff, #adc2cd); 
+}
+.button.sound:active { 
+	background:-moz-linear-gradient(top, #adc2cd, #f0f5f7); 
+	background:linear-gradient(top, #adc2cd, #f0f5f7); 
+}
+
+p.info, p.attention { 
+	padding-left:25px; 
+	background-position:left 0.15em; 
+	background-repeat:no-repeat; 
+}
+
+p.info { background-image:url("../images/iconInformation16.png"); }
+p.attention { background-image:url("../images/iconAttention16.png"); }
+
+.textCentre { text-align:center; clear:both; }
+.textRight { text-align:right; }
+
+.large { font-size:1.2em; }
+.extraLarge { font-size:1.4em; }
+
+.preTestInfo h1, .preTestInfo h2, .preTestInfo b {font-weight:bold;}
+.preTestInfo p.image-placeholder {margin:0;}
+.preTestInfo ul li {list-style:inside;}
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}
+
+.note {
+    background-color: rgb(255, 240, 70);
+	color:black !important;
+    /*height: 250px;
+    /*padding: 10px;*/
+    position: absolute;
+    width: 200px;
+    -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+	-moz-border-radius: 0.357em;
+	border-radius: 0.357em;
+}
+
+.note .close {
+	margin: 0.2em 0.5em 0 0;
+}
+
+.note .draghandle {
+    background-color: #db0;
+    border-bottom: 1px solid #a80;
+	height:1.5em;
+	cursor:move;
+	-moz-user-select:none;
+	user-select:none;
+	-moz-border-radius-topleft: 0.357em;
+	-moz-border-radius-topright: 0.357em;
+	border-radius: 0.357em 0.357em 0 0;	
+}
+
+.note .edit {
+    outline: none;
+	overflow-x:hidden;
+	overflow-y:auto;
+    height: 250px;
+	word-wrap:break-word;
+}
+
+.edit .highlightText {
+    padding: 10px;
+	font-weight:bold;
+}
+.edit .mainText{
+    padding: 0 10px 10px;
+}
+.note .ftr {
+    padding: 5px 4px;
+	overflow: hidden;
+	text-align:center;
+}
+.note .ftr a {
+	color:#666;
+	/* font-weight:bold;
+	float: left; */
+}
+.note .ftr a:hover {
+	color:#222;
+	/* text-decoration:underline; */
+}
+
+ul.editActions {
+	margin:0 !important;
+	line-height:1.25em;
+}
+ul.editActions li {
+	float:left;
+	vertical-align:middle;
+	list-style:none !important;
+}
+ul.editActions li a {
+	border: 1px dotted #fff;
+	display:inline-block;
+	height: 20px; width:20px;
+	background-repeat: no-repeat; background-position: 1px 2px;
+}
+ul.editActions li a:hover {
+	border: 1px outset #e0e0e0;
+}
+ul.editActions li a.copy {
+	background-image: url(../images/page_white_copy.png);
+}
+ul.editActions li a.paste {
+	background-image: url(../images/page_white_paste.png);
+}
+ul.editActions li a.cut {
+	background-image: url(../images/cut.png);
+}
+.hidden {
+	display:none !important;
+}
+
+

@@ -1,0 +1,128 @@
+@namespace xmlns "http://www.w3.org/2000/svg";
+@namespace connect "http://connect.ucles.org.uk/ns/ConnectDeliveryEngine";
+
+a:focus > rect { 
+    stroke-width: 1px; 
+    stroke: #f00;
+}
+
+*[connect|class~=chart] { 
+    font-size: 14px;
+    display:block;
+    margin: 0 auto;
+}
+
+*[connect|class~=chart] > text:first-child { 
+    font-size: 1.25em;
+    fill: #909090;  
+    display: block; 
+}
+
+*[connect|class~=chart] > text { 
+    font-size: 1.2em;
+    fill: #f00; 
+    display: none;  
+}
+
+*[connect|class~=chart] > line {
+    stroke: #f00;
+    stroke-width: 0.2px;
+    display: none;
+}
+
+*[connect|class~=chartLayer] > text { 
+    font-size: 0.9em;
+    display: block; 
+}
+
+*[connect|class~=titleBox] { 
+    stroke-width: 0.2px;
+    stroke: #8C8CFF;
+    fill: #fff;
+    display: block; 
+}
+
+*[connect|class~=chartBar] {
+    stroke: #000;
+    stroke-width: 0.2px;
+}
+
+*[connect|class~=chartBarInteraction] {
+    cursor: pointer;
+}
+
+*[connect|axis] > line {
+    stroke: #000;
+    stroke-width: 0.2px;
+}
+
+*[connect|axis] > g > line {
+    stroke: #A0A0A0;
+    stroke-width: 0.1px;
+}
+
+*[connect|axis] > text    {
+    font-size: 1.2em;
+    font-weight: normal;
+    fill: #000;  
+}
+
+*[connect|axis] > g > text {
+    font-size: 1.2em;
+    fill: #000;    
+}
+
+*[connect|columns] > text {
+    font-size: 1.2em;
+    fill: #000;    
+}
+
+*[connect|sectors] > text {
+    font-size: 0.6em;
+    fill: #000;    
+}
+
+*[connect|sectors] > line {
+    stroke: #0f0;
+    stroke-width: 0.4px;
+}
+
+*[connect|sectors] > g >line {
+    stroke: #404040;
+    stroke-width: 0.3px;
+}
+
+*[connect|columns] > line {
+    stroke: #C0C0C0;
+    stroke-width: 0.3px;
+}
+
+text[connect|class~=legendItem] {
+    font-size: 1.1em;
+    fill: #000;    
+}
+
+foreignObject > p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+foreignObject > p > input{
+    font-size: 1.1em;
+}
+
+foreignObject[connect|class~=legendItem] > p {
+    margin-top: 0;
+    text-align: left;
+}
+
+*[connect|class~=legendOutline] { 
+    stroke: #C0C0C0;
+    stroke-width: 0.4px;
+    fill: #fff;
+}
+
+*[connect|class~=legendContainer] { 
+    font-size: 1em;
+    fill: #000; 
+}

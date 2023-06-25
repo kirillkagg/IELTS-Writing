@@ -1,0 +1,454 @@
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace connect "http://connect.ucles.org.uk/ns/ConnectDeliveryEngine";
+
+[connect|class~=instructions] {
+    padding: 1em 0;
+}
+
+[connect|class~=testInfo] a, [connect|class~=showCopyright] {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+[connect|class~=copyrightInfo] {
+    display: none;
+}
+
+[connect|class~=container] [connect|class~=instructions] h1,
+[connect|class~=container] [connect|class~=instructions] h2,
+[connect|class~=container] [connect|class~=instructions] h3 {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+[connect|class~=instructions] [connect|class~=testTitle] {
+    margin-bottom: 1em;
+}
+
+[connect|class~=instructions] [connect|class~=testDetails] {
+    float: right;
+    width: 25%;
+    text-align: right; 
+}
+
+[connect|class~=instructions] [connect|class~=testDetails] [connect|class~=tier] {
+    display: block;
+    font-size: 5em;
+    padding-bottom: 0.5em;
+}
+
+[connect|class~=instructions] [connect|class~=testInfo] {
+    clear: left;
+    margin-top: 2em;
+    width: 75%;
+}
+[connect|class~=testDetails] h2, [connect|class~=testInfo] h2 {
+	margin-bottom:0.75em;
+}
+[connect|class~=testInfo] ul li {
+	/* list-style:inside; */
+}
+
+[connect|class~=instructions] [connect|class~=testId] {
+    margin-top: 2em;
+}
+
+[connect|class~=instructions] [connect|class~=copyrightLink] {
+    margin-top: 2em;
+    text-align: right; 
+}
+
+[connect|class~=instructions] [connect|class~=testDetails] p {
+    margin: 0;
+}
+
+[connect|class~=container] [connect|class~=testDetails] h2 {
+    font-size: 1.357em;
+}
+
+[connect|class~=container] [connect|class~=testDetails] p {
+    font-size: 1.143em;
+}
+
+[connect|class~=container] [connect|class~=testTitle] p {
+    font-size: 1.143em;
+}
+
+
+/* TABS STYLES */
+
+.dialogue-wrapper table {
+	width: 100%;
+}
+.dialogue-wrapper td, .dialogue-wrapper th {
+	padding: 0.25em;
+	/*border-right: dotted 1px rgba(0,0,0,0.2);
+	border-bottom: dotted 1px rgba(0,0,0,0.3);*/
+}
+.dialogue-wrapper th { font-weight: bold; }
+
+#tabs { min-height:15em; }
+
+[connect|class~=topBar] [connect|class~=logo] {
+    float: left;
+}
+[connect|class~=topBar] [connect|class~=logo] img {
+	margin: 0 0.5em 0 0;
+}
+[connect|class=instructions] [connect|class~=topBar] {
+	margin-top: 1.0em;
+}
+[connect|class=instructions] p {
+	margin-bottom: 1.0em;
+}
+
+[connect|class=instructions] ul > li {
+	list-style-position: inside;
+}
+
+div.top-bottom-borders {
+	margin:0.5em 0 1.25em;
+	padding:0.5em 0;
+	border-top:2px solid #000;
+	border-bottom:2px solid #000;
+}
+
+.instructionPanel {
+	font-size: 12px;
+	width: 99%;
+	max-width: 700px;
+	padding: 4px;
+	border: solid 1px #C0C0C0;
+}
+
+.instructionPanel  table {
+	/*margin-top: 4px;
+	margin-bottom: 0;*/
+}
+
+.instructionPanel caption {
+	text-align:left;
+}
+
+.instructionPanel  td.icon {
+	width: 120px;
+}
+
+.instructionPanel td {
+	border : 0;
+	text-align: left;
+	line-height: 1.3em;
+	padding-bottom: 4px;
+}
+
+.instructionPanel .noPointer {
+	cursor: default;
+}
+
+.instructionPanel .icon {
+	line-height: 30px;
+}
+
+[connect|class~=itemBody] .instructionPanel p{
+	margin-top: 0;
+}
+p[connect|class=candidateNotice] {
+	clear:left;
+	font-weight:bold;
+	color:#800;
+}
+.preTestInfo .instructionPanel {
+	margin-bottom: 1em;
+}
+.preTestInfo .instructionPanel .flash { 
+	font-weight:normal;
+	-moz-animation:flash 6s;
+	animation:flash 6s;	
+}
+
+.preTestInfo h1, .preTestInfo h2, .preTestInfo b, .preTestInfo .important {font-weight:bold;}
+.preTestInfo h2 { font-size:1.1em; margin-bottom: 1em !important; }
+.preTestInfo p.image-placeholder {margin:0;}
+.preTestInfo ul li {list-style:inside;}
+.preTestInfo img {margin-bottom:0.5em;display: block;}
+/* .preTestInfo embed {display:none;} */
+.preTestInfo #reading-info {float:left;width:20em;}
+.preTestInfo #video-info {float:right;width:77%;}
+.preTestInfo #audio-setting {float:left;width:23%;}
+.preTestInfo #audio-setting img {margin:1.5em 0 1em;}
+
+.preTestInfo b, .preTestInfo  strong { font-weight: bold; }
+.preTestInfo  i, .preTestInfo em { font-style: italic; }
+
+.contextHelp div {
+    -moz-border-radius:5px;	
+    border-radius:5px;
+}
+.contextHelp h2 {
+	font-size:1.2em;
+}
+.contextHelp img {
+	margin-bottom:1em;
+}
+
+.tabbed > div {
+	font-size: 14px;
+	display: none;
+	clear: both;
+}
+
+.tabbed > div.active{
+	display: block;
+}
+
+.tabbed ul li {
+	list-style-position: outside;
+	margin-left: 1em;
+}
+
+.tabbed .instructionPanel{
+	font-size: 12px;
+	width: 99%;
+/*	max-width: 600px;*/
+	padding: 4px;
+	border: 0;
+}
+
+.tab {
+	display: inline;
+	float: left;
+	width: 100%;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin-bottom: 1em;
+}
+
+.tab .tabs {
+	display: inline;
+	float: left;
+	padding: 0;
+	margin: 0; /* CSS reset */
+}
+
+.tab .tabs li {
+	display: inline;
+	float: left;
+	width: auto;
+	padding: 0; /* CSS reset */
+	border-style: solid;
+	border-width: 1px;
+	border-bottom: none;
+	margin: 0;
+	list-style: none;
+}
+
+.tab .tabs li.active {
+	position: relative;
+	z-index: 100;
+	padding: 0; /* CSS reset */
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin-bottom: -1px;
+}
+
+.tab .tabs li a {
+	display: inline;
+	float: left;
+	width: auto;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom: none;
+	margin: 0; /* CSS reset */
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+/* END: (Don't edit). */
+
+/* START: Theme (Editable). */
+
+.tab.theme {
+	border-bottom-color: #7D7D7E; /* Horizontal line underneath tabs. */
+}
+
+.tab.theme .tabs {
+	padding-left: 0.5em; /* Left indentation of tabs. */
+}
+
+.tab.theme .tabs li {
+	border-color: rgba(0,0,0,0.2);
+	margin-right: 0.5em; /* Space between each tab. */
+    border-radius: .4em .4em 0 0;
+}
+
+.tab.theme .tabs li.active {
+    border-color: #7D7D7E;
+	border-bottom-color: #fff;
+}
+
+.tabpanel {
+	max-height: 400px;
+    overflow-x: hidden;
+	overflow-y:auto;
+	margin-bottom:1em;
+}
+
+/* General tab style. */
+.tab.theme .tabs li a {
+	padding: 0.25em 1em;
+    border-top-color: transparent;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	background: rgba(0,0,0,0.1);
+	color: #333;
+	font-weight: bold;
+    border-radius: .4em .4em 0 0;
+}
+
+/* Inactive tab selection colours. */
+.tab.theme .tabs li a:hover, .tab.theme .tabs li a:active, .tab.theme .tabs li a:focus {
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	color: #333;
+	background: rgba(0,0,0,0.2);
+}
+
+/* Active tab selection colours. */
+.tab.theme .tabs li.active a, .tab.theme .tabs li.active a:hover, .tab.theme .tabs li.active a:active, .tab.theme .tabs li.active a:focus {
+	border-color: transparent;
+	color: #333;
+	background: #fff;
+}
+
+/* Draggable dialogue handle */
+div.dialogue-wrapper.ui-draggable div.title {
+	cursor: move;
+}
+
+img.outline { 
+	border:1px solid #fff; 
+}
+
+/* CIS form */
+
+#candidateInformation { 
+	text-align: left;
+	width: 50em;
+	margin: 30px auto 10px auto; 
+}
+
+#candidateInformation h1,
+#candidateInformation .ui-widget-content { 
+	border: 0; 
+}
+
+#candidateInformation p { margin-top: 0; }
+
+#candidateInformation input:not(.button),
+#candidateInformation select {
+    border: 1px solid #666;
+    -moz-border-radius: 0.143em; /* 2px at font-size: 14px */
+    border-radius: 0.143em; /* 2px at font-size: 14px */
+    background: #fff;
+}
+
+#candidateInformation input.button, #candidateInformation button {
+	width: 5em;
+	margin: 0.5em;
+}
+
+#candidateInformation .ui-tabs .ui-tabs-panel {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#candidateInformation #tabs ul, #candidateInformation #tabs ul > li {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#candidateInformation input { height: auto; }
+
+#candidateInformation #tabs ul > li span {
+	display:inline-block;
+	min-width:50%;
+}
+
+#candidateInformation #tabs ul.ui-tabs-nav { display:none; }
+
+#candidateInformation #CISnav {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#candidateInformation #CISnav span { display:none; }
+
+#candidateInformation .CISnext, #candidateInformation .CISprevious  {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    background: url("../images/nav-buttons.png") no-repeat left top;
+	cursor: pointer;
+}
+
+#candidateInformation .CISnext:hover,
+#candidateInformation .CISnext:focus {
+    background-position: -56px top;
+}
+
+#candidateInformation .CISprevious { background-position: left bottom; }
+
+#candidateInformation .CISprevious:hover,
+#candidateInformation .CISprevious:focus {
+    background-position: right bottom;
+}
+
+#candidateInformation #CISerrors  { display:none; }
+
+#candidateInformation #CISerrors p  { margin-bottom: 0.5em; }
+
+#candidateInformation #missing-entries a label {
+	cursor: pointer;
+	padding: 2px 0.5em;
+	display: inline-block !important;
+	border-bottom: 1px dotted transparent;
+}
+
+#candidateInformation #missing-entries a label:hover, #candidateInformation #missing-entries a label:active {
+	background: rgba(181, 234, 255, 0.75);
+	border-color: #34B2F1;
+}
+
+#candidateInformation .noMargin { margin: 0; }
+
+#candidateInformation  table { 
+	border: 0; 
+	margin-left: 0; 
+	margin-right: 0; 
+}
+
+#candidateInformation tr,
+#candidateInformation th, 
+#candidateInformation td { 
+	border: 0; 
+	text-align: left; 
+}
+
+#candidateInformation th { background: transparent; }
+
+#candidateInformation #tabs-5 label {
+	display: inline-block;
+	min-width: 6em;
+}
+
+[connect|class~=itemBody] p.exam {
+	color: #575757;
+	text-align: right;
+	margin: 1em;
+	font-size: 0.85em;
+}

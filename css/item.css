@@ -1,0 +1,2771 @@
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace connect "http://connect.ucles.org.uk/ns/ConnectDeliveryEngine";
+@namespace math "http://www.w3.org/1998/Math/MathML";
+@namespace svg "http://www.w3.org/2000/svg";
+
+[connect|class~=itemBody] {
+    padding: 0 0.429em; /* 0 6px at font-size: 14px */
+    overflow-x: hidden;
+}
+
+[connect|class~=itemBody] [connect|class~=container] {
+    padding: 0 0.75em;
+}
+[connect|class~=itemBody] [connect|class~=container],
+[connect|class~=itemBody] [connect|class~=columns] {
+    margin: 0.857em 0.429em; /* 12px 6px at font-size: 14px */
+    -moz-border-radius: 0.357em; /* 5px at font-size: 14px */
+    border-radius: 0.357em; /* 5px at font-size: 14px */
+    background-color: #dde3ee;
+    background-image: -moz-linear-gradient(top, #fff, #dde3ee);
+    background-image: linear-gradient(top, #fff, #dde3ee);
+    background-repeat: repeat-x;
+    background-position: left top;
+    -moz-box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.0714em 0.214em rgba(0, 0, 0, 0.25);
+}
+
+[connect|class~=itemBody] [connect|class~=column] [connect|class~=container],
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] > div,
+[connect|class~=itemBody] [connect|class~=container] [connect|author-class~=accordionChoice] {
+    -moz-border-radius: 0;
+    border-radius: 0;
+    overflow: hidden;
+    background: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 0 0 0 0.1em;
+    margin: 0;
+}
+
+/* Rules for Item Content Scrolling */
+[connect|class~=itemBody] [connect|class~=scroll-content] {
+	padding-right: 0;
+	padding-left: 0;
+}
+[connect|class~=itemBody] [connect|class~=scroll-container] {
+	overflow: auto !important;
+}
+[connect|class~=itemBody] [connect|class~=scroll-content]:not([connect|class~=columns]) > [connect|class~=scroll-container],
+[connect|class~=itemBody] [connect|class~=columns] > [connect|class~=scroll-container] > div {
+    padding-right: 0.75em;
+    padding-left: 0.75em;
+}
+[connect|class~=itemBody] [connect|class~=scroll-content] [connect|class~=gapMatchInteraction] {
+	margin: 0;
+}
+[connect|class~=itemBody] [connect|class~=scroll-content] [connect|class~=gapMatchInteraction] > [connect|class~=gapStimulus] {
+    padding-bottom: 1em;
+}
+[connect|class~=itemBody] [connect|class~=scroll-content] [connect|class~=gapMatchInteraction] [connect|class~=scroll-container] {
+    padding-top: 0.4em;
+}
+
+[connect|class~=itemBody] b,
+[connect|class~=itemBody] strong {
+    font-weight: bold;
+}
+
+[connect|class~=itemBody] i,
+[connect|class~=itemBody] em {
+    font-style: italic;
+}
+
+[connect|class~=itemBody] q {
+    word-spacing: 0.429em;
+    quotes: none;
+}
+
+[connect|class~=itemBody] p,
+[connect|class~=itemBody] h3,
+[connect|class~=itemBody] h4,
+[connect|class~=itemBody] h5,
+[connect|class~=itemBody] h6,
+[connect|class~=itemBody] table,
+[connect|class~=itemBody] blockquote,
+[connect|class~=itemBody] video,
+
+[connect|class~=itemBody] ul,
+[connect|class~=itemBody] ol,
+/*
+[connect|class~=itemBody] dl,
+[connect|class~=itemBody] img,
+[connect|class~=itemBody] object,
+[connect|class~=itemBody] svg|svg,
+[connect|class~=itemBody] math|math,
+*/
+[connect|class~=itemBody] [connect|class~=rubricBlock],
+[connect|class~=itemBody] [connect|class~=blockInteraction],
+[connect|class~=itemBody] [connect|class~=calculator] {
+    display: block;
+    margin-top: 0.857em; /* 12px at font-size: 14px */
+    margin-bottom: 1.714em; /* 24px at font-size: 14px */
+}
+
+[connect|class~=itemBody] td ul,
+[connect|class~=itemBody] td ol {
+	margin: 0 !important;
+}
+
+[connect|class~=itemBody] li[connect|class~=gapText] img {
+	margin: 0.428em 0;
+	/*margin-top: 0.428em;
+	margin-bottom: 0.428em;*/
+}
+/* Compensate for Firefox bug: object margin-top doesn't collapse. */
+[connect|class~=itemBody] p + object,
+[connect|class~=itemBody] h1 + object,
+[connect|class~=itemBody] h3 + object,
+[connect|class~=itemBody] h4 + object,
+[connect|class~=itemBody] h5 + object,
+[connect|class~=itemBody] h6 + object,
+[connect|class~=itemBody] table + object,
+[connect|class~=itemBody] ul + object,
+[connect|class~=itemBody] ol + object,
+[connect|class~=itemBody] dl + object,
+[connect|class~=itemBody] blockquote + object,
+[connect|class~=itemBody] video + object,
+[connect|class~=itemBody] object + object,
+[connect|class~=itemBody] svg|svg + object,
+[connect|class~=itemBody] math|math + object,
+[connect|class~=itemBody]
+        [connect|class~=rubricBlock] + object,
+[connect|class~=itemBody]
+        [connect|class~=blockInteraction] + object,
+[connect|class~=itemBody]
+        [connect|class~=calculator] + object {
+    margin-top: 0;
+}
+
+[connect|class~=itemBody] h1,
+[connect|class~=itemBody] h2,
+[connect|class~=itemBody] h3,
+[connect|class~=itemBody] h4,
+[connect|class~=itemBody] h5,
+[connect|class~=itemBody] h6 {
+    font-weight: bold;
+    color: #000000;
+}
+
+/*********** blue gradient background not wanted
+[connect|class~=itemBody] h1,
+[connect|class~=itemBody] h2,
+[connect|class~=itemBody] h3 {
+    border-bottom: 1px dotted #c0c0c0;
+    background-color: #dde3ee;
+    background-image: -moz-linear-gradient(top, #fff, #dde3ee);
+    background-image: linear-gradient(top, #fff, #dde3ee);
+    background-repeat: repeat-x;
+    background-position: left top;
+    -moz-background-size: contain;
+    background-size: contain;
+}***********/
+
+[connect|class~=itemBody] h3.inFocus {
+    background-image: -moz-linear-gradient(top, #fff, #abe5fd);
+    background-image: linear-gradient(top, #fff, #abe5fd);
+}
+
+[connect|class~=itemBody] h1 {
+    margin-top: 0.667em; /* 12px at font-size: 18px */
+    margin-bottom: 0.667em; /* 12px at font-size: 18px */
+    margin-left: -0.778em; /* -14px at font-size: 18px */
+    margin-right: -0.778em; /* -14px at font-size: 18px */
+    padding-top: 0.333em; /* 6px at font-size: 18px */
+    padding-bottom: 0.333em; /* 6px at font-size: 18px */
+    padding-left: 0.778em; /* 14px at font-size: 18px */
+    padding-right: 0.778em; /* 14px at font-size: 18px */
+    font-size: 1.286em; /* 18px at font-size: 14px */
+    line-height: 1.556em; /* 28px at font-size: 18px */
+}
+
+[connect|class~=itemBody] [connect|class~=container]>h1:first-child {
+    margin-top: 0;
+    -moz-border-radius-topleft: 0.278em; /* 5px at font-size: 18px */
+    -moz-border-radius-topright: 0.278em; /* 5px at font-size: 18px */
+    border-top-left-radius: 0.278em; /* 5px at font-size: 18px */
+    border-top-right-radius: 0.278em; /* 5px at font-size: 18px */
+}
+
+[connect|class~=itemBody] [connect|class~=container]>h1:last-child {
+    margin-bottom: 0;
+    -moz-border-radius-bottomleft: 0.278em; /* 5px at font-size: 18px */
+    -moz-border-radius-bottomright: 0.278em; /* 5px at font-size: 18px */
+    border-bottom-left-radius: 0.278em; /* 5px at font-size: 18px */
+    border-bottom-right-radius: 0.278em; /* 5px at font-size: 18px */
+}
+
+[connect|class~=itemBody] h2 {
+    margin-top: 0.75em; /* 12px at font-size: 16px */
+    margin-bottom: 0.75em; /* 12px at font-size: 16px */
+    margin-left: -0.875em; /* -14px at font-size: 16px */
+    margin-right: -0.875em; /* -14px at font-size: 16px */
+    padding-top: 0.375em; /* 6px at font-size: 16px */
+    padding-bottom: 0.375em; /* 6px at font-size: 16px */
+    padding-left: 0.875em; /* 14px at font-size: 16px */
+    padding-right: 0.875em; /* 14px at font-size: 16px */
+    font-size: 1.143em; /* 16px at font-size: 14px */
+    line-height: 1.625em; /* 26px at font-size: 16px */
+}
+
+[connect|class~=itemBody] [connect|class~=container]>h2:first-child {
+    margin-top: 0;
+    -moz-border-radius-topleft: 0.313em; /* 5px at font-size: 16px */
+    -moz-border-radius-topright: 0.313em; /* 5px at font-size: 16px */
+    border-top-left-radius: 0.313em; /* 5px at font-size: 16px */
+    border-top-right-radius: 0.313em; /* 5px at font-size: 16px */
+}
+
+[connect|class~=itemBody] [connect|class~=container]>h2:last-child {
+    margin-bottom: 0;
+    -moz-border-radius-bottomleft: 0.313em; /* 5px at font-size: 16px */
+    -moz-border-radius-bottomright: 0.313em; /* 5px at font-size: 16px */
+    border-bottom-left-radius: 0.313em; /* 5px at font-size: 16px */
+    border-bottom-right-radius: 0.313em; /* 5px at font-size: 16px */
+}
+
+[connect|class~=itemBody] h3 {
+    /* margin-left: -1em;
+    margin-right: -1em; */
+    padding: 0.429em 1em;
+}
+
+[connect|class~=itemBody] [connect|class~=container]>h3:first-child {
+    margin-top: 0;
+    -moz-border-radius-topleft: 0.357em; /* 5px at font-size: 14px */
+    -moz-border-radius-topright: 0.357em; /* 5px at font-size: 14px */
+    border-top-left-radius: 0.357em; /* 5px at font-size: 14px */
+    border-top-right-radius: 0.357em; /* 5px at font-size: 14px */
+}
+
+[connect|class~=itemBody] [connect|class~=container]>h3:last-child {
+    margin-bottom: 0;
+    -moz-border-radius-bottomleft: 0.357em; /* 5px at font-size: 14px */
+    -moz-border-radius-bottomright: 0.357em; /* 5px at font-size: 14px */
+    border-bottom-left-radius: 0.357em; /* 5px at font-size: 14px */
+    border-bottom-right-radius: 0.357em; /* 5px at font-size: 14px */
+}
+
+[connect|class~=itemBody] div[connect|class~=tableMatchInteraction] table {
+    display: table;
+    margin-left: auto; /* to center */
+    margin-right: auto; /* to center */
+    border-collapse: collapse;
+}
+[connect|class~=itemBody] div[connect|class~=tableMatchInteraction] table td:not(:first-child) { cursor: pointer; }
+[connect|class~=itemBody] div[connect|class~=tableMatchInteraction] table td:first-child { text-align:left; cursor: default; }
+[connect|class~=itemBody] div[connect|class~=tableMatchInteraction] table td:focus { background-color: #c3d9ff; }
+
+[connect|class~=itemBody] table {
+    display: block; /* Force stupid Firefox to collapse table margins */
+	/*##### Disabled margin - not sure of side effects #####*/
+	/* margin-left: -0.143em;  -2px at font-size: 14px */
+	/* margin-right: -0.143em; -2px at font-size: 14px */
+    border-collapse: collapse;
+}
+
+[connect|class~=itemBody] th {
+    background: #c3d9ff;
+    font-weight: bold;
+    text-align: inherit;
+}
+
+[connect|class~=itemBody] td {
+    vertical-align: top;
+    text-align: left;
+}
+
+[connect|class~=itemBody] td,
+[connect|class~=itemBody] th {
+    border: 1px solid #666;
+    padding: 0.3em 1em; /* 4px 14px at font-size: 14px */
+	/*##### Disabled centring - not sure of side effects #####*/
+    /*text-align: center;*/
+}
+[connect|class~=itemBody] div[connect|class~=tableMatchInteraction] table th {
+    padding: 0.3em;
+	text-align: center;
+}
+[connect|class~=itemBody] tfoot {
+    font-style: italic;
+}
+
+[connect|class~=itemBody] caption {
+    background: #eee;
+}
+
+[connect|class~=itemBody] table p,
+[connect|class~=itemBody] ul p,
+[connect|class~=itemBody] ol p,
+[connect|class~=itemBody] dl p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+[connect|class~=itemBody] label p { display: inline-block; }
+
+[connect|class~=itemBody] table p+p,
+[connect|class~=itemBody] ul p+p,
+[connect|class~=itemBody] ol p+p,
+[connect|class~=itemBody] dl p+p {
+    text-indent: 1.429em; /* Same as line-height; 20px at font-size: 14px. */
+}
+
+[connect|class~=itemBody] ul,
+[connect|class~=itemBody] ol {
+    /* margin-left: 1.429em; Same as line-height; 20px at font-size: 14px. */
+	padding-left: 40px;
+}
+
+/*[connect|class~=itemBody] ul>li {
+    list-style-type: disc;
+}
+
+[connect|class~=itemBody] ol>li {
+    list-style-type: decimal;
+}*/
+
+[connect|class~=itemBody] ol ul,
+[connect|class~=itemBody] ul ul {
+	list-style-type: circle;
+}
+
+ol.list-lower-alpha,
+[connect|class~=itemBody] ol[connect|author-class~="list-lower-alpha"] {
+	list-style-type: lower-alpha;
+}
+ol.list-lower-greek,
+[connect|class~=itemBody] ol[connect|author-class~="list-lower-greek"] {
+	list-style-type: lower-greek;
+}
+ol.list-lower-roman,
+[connect|class~=itemBody] ol[connect|author-class~="list-lower-roman"] {
+	list-style-type: lower-roman;
+}
+ol.list-upper-alpha,
+[connect|class~=itemBody] ol[connect|author-class~="list-upper-alpha"] {
+	list-style-type: upper-alpha;
+}
+ol.list-upper-roman,
+[connect|class~=itemBody] ol[connect|author-class~="list-upper-roman"] {
+	list-style-type: upper-roman;
+}
+
+ul.list-circle,
+[connect|class~=itemBody] ul[connect|author-class~="list-circle"] {
+	list-style-type: circle !important;
+}
+ul.list-disc,
+[connect|class~=itemBody] ul[connect|author-class~="list-disc"] {
+	list-style-type: disc !important;
+}
+ul.list-square,
+[connect|class~=itemBody] ul[connect|author-class~="list-square"] {
+	list-style-type: square !important;
+}
+
+[connect|class~=itemBody] dt {
+    font-weight: bold;
+}
+
+[connect|class~=itemBody] dd {
+    margin-left: 1em;
+}
+
+[connect|class~=itemBody] blockquote {
+    border: 1px dotted #ccc;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0 1em;
+    overflow: hidden; /* Don't collapse child margins. */
+}
+
+/* Scale images, objects, video, SVG down to fit available width. */
+[connect|class~=itemBody] img,
+[connect|class~=itemBody] object,
+[connect|class~=itemBody] video,
+[connect|class~=itemBody] svg|svg {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+[connect|class~=itemBody] img,
+[connect|class~=itemBody] object,
+[connect|class~=itemBody] video,
+[connect|class~=itemBody] svg|svg {
+    vertical-align: bottom;
+}
+
+[connect|class~=itemBody] p img,
+[connect|class~=itemBody] p object,
+[connect|class~=itemBody] p video,
+[connect|class~=itemBody] p math|math {
+    display: inline;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+[connect|class~=itemBody] p svg|svg {
+    display: block;
+	margin: 0;
+    vertical-align: baseline;
+}
+
+/* accordion styles */
+
+[connect|class~=itemBody] div.ui-accordion {
+	width: auto;
+}
+
+[connect|class~=itemBody] h3.ui-accordion-header {
+	/* margin-top:0.357em; */
+	margin-bottom:0.5em;
+	cursor:pointer;
+    border-top: 0;
+	-moz-border-radius: 0;
+    border-radius: 0;
+}
+[connect|class~=itemBody] h3.ui-accordion-header .ui-icon {
+	display: none;
+}
+[connect|class~=itemBody] h3.ui-accordion-header input,
+[connect|class~=itemBody] h3.ui-accordion-header label.answering span {
+	position:absolute;
+	left:-1000px;
+	top:-1000px;
+}
+[connect|class~=itemBody] h3.ui-accordion-header label {
+	float:right;
+	background:url(../images/checkboxOff.png) no-repeat top right;
+	display:inline-block;
+	padding:0.1em 30px 0.1em 0.3em;
+	font-weight:normal;
+	font-size:0.9em;
+	-moz-border-radius: 0.3em;
+    border-radius: 0.3em;
+	min-height: 1.5em;
+	margin-top: -0.1em;
+	line-height: 1.5em;
+}
+[connect|class~=itemBody] h3.ui-accordion-header label:hover,
+[connect|class~=itemBody] h3.ui-accordion-header label:active {
+	background-color:rgba(181, 234, 255, 0.5);
+}
+[connect|class~=itemBody] h3.ui-accordion-header.inFocus label:hover,
+[connect|class~=itemBody] h3.ui-accordion-header.inFocus label:active {
+	background-color:rgba(181, 234, 255, 1);
+}
+[connect|class~=itemBody] h3.ui-accordion-header label.answering {
+	background-image:url(../images/checkboxOn.png);
+	width:22px;
+	height:21px;
+	overflow:hidden;
+	padding:0.1em;
+}
+[connect|class~=itemBody] div.ui-accordion-content {
+	background: transparent;
+	border: none;
+	padding: 0 1em;
+	margin: 0;
+	-moz-border-radius: 0;
+    border-radius: 0;
+	line-height: 1.429em;
+	overflow: hidden;
+}
+
+[connect|class~=itemBody] [connect|class~=rubricBlock] {
+    margin-left: -0.75em;
+    margin-right: -0.75em;
+    padding: 0.857em 0.75em;
+    overflow: hidden; /* Don't collapse child margins. */
+    background-color: #fff;
+}
+
+[connect|class~=container] >[connect|author-class~=prompt] {
+    padding: 0.857em 0.75em;
+    overflow: hidden;
+}
+
+[connect|class~=itemBody] [connect|class~=container]> [connect|class~=rubricBlock]:first-child,
+[connect|class~=itemBody] [connect|class~=container]> [connect|class~=rubricBlock] p:first-child {
+    margin-top: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=container]> [connect|class~=rubricBlock]:last-child,
+[connect|class~=itemBody] [connect|class~=container]> [connect|class~=rubricBlock] p:last-child {
+    margin-bottom: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=rubricBlock] p {
+	margin: 0.5em 0;
+}
+
+[connect|class~=itemBody] [connect|class~=rubricBlock] p b {
+	line-height: 0;
+}
+
+[connect|class~=itemBody] [connect|state~=placeholder] {
+    color: rgba(0,0,0,0.75);
+    font-style: italic;
+}
+
+[connect|class~=itemBody] span[connect|class~=inlineInteraction] {
+	position:relative;
+	display:inline-block;
+	line-height:1.2em;
+	z-index:2;
+}
+[connect|class~=itemBody] span[connect|class~=textEntryInteraction],
+[connect|class~=itemBody] span[connect|class~=textEntryProxy] {
+	background:#fff;
+}
+[connect|class~=itemBody] span[connect|class~=inlineInteraction] input {
+	position:relative;
+	background-color:transparent !important;
+}
+
+[connect|class~=itemBody] input[connect|class~=inlineInteraction],
+[connect|class~=itemBody] span[connect|class~=inlineInteraction] input,
+[connect|class~=itemBody] [connect|class~=extendedTextInteraction] textarea,
+[connect|class~=itemBody] [connect|class~=extendedTextInteraction] div.textarea,
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>div
+        [connect|class~=gap] {
+    border: 1px solid #0370a7;
+    -moz-border-radius: 0.143em; /* 2px at font-size: 14px */
+    border-radius: 0.143em; /* 2px at font-size: 14px */
+    background: #fff;
+	/*padding: 1px; REMOVED AS EXPANDABLE TE REVERTED */
+}
+[connect|class~=itemBody] input[connect|class~=inlineInteraction],
+[connect|class~=itemBody] span[connect|class~=inlineInteraction] input {
+	text-align:center;
+}
+[connect|class~=textEntryInteraction][connect|class~=inlineInteraction],
+[connect|class~=textEntryProxy][connect|class~=inlineInteraction] {
+	font-weight:bold;
+	letter-spacing:0.05em;
+	margin:auto 0.2em;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=prompt] {
+    margin-left: 60%;
+    padding-left: 1em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=title] {
+	font-weight:bold;
+	font-size:1.2em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=title]>div
+        [connect|availableTarget=true] {
+    outline: 1px dashed #000;
+}
+
+[connect|class~=itemBody] [connect|author-class~=subtitle] {
+	font-style:italic;
+	font-size:1.1em;
+}
+
+[connect|class~=itemBody] [connect|class~=extendedTextInteraction] textarea,
+[connect|class~=itemBody] [connect|class~=extendedTextInteraction] div.textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+	resize: none;
+	overflow-y: auto;
+}
+[connect|class~=itemBody] textarea[disabled=true],
+[connect|class~=itemBody] div.textarea[disabled=true] {
+	background: #f0f0f0;
+}
+
+[connect|class~=itemBody] ul > li[connect|class~=simpleChoice] {
+    list-style-type: none;
+}
+
+[connect|class~=itemBody] [connect|function~=validation] {
+    margin-left: 1.429em; /* Same as line-height; 20px at font-size: 14px. */
+}
+
+[connect|class~=itemBody] [connect|class~=choiceInteraction] > ul {
+    -moz-column-gap: 2.429em; /* 34px at font-size: 14px */
+    column-gap: 2.429em; /* 34px at font-size: 14px */
+	margin-bottom: 0.857em;
+    margin-left: 1.429em; /* Same as line-height; 20px at font-size: 14px. */
+	padding-left: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=choiceInteraction] li img {
+    cursor: pointer;
+    outline: 1px solid #9CA2AA;
+}
+
+[connect|class~=itemBody] [connect|class~=choiceInteraction] li img:hover {
+    outline: 1px dashed #000;
+}
+
+[connect|class~=itemBody] [connect|class~=choiceInteraction] li img.selected {
+    outline: 4px solid #189CDD;
+}
+
+[connect|class~=itemBody] ul>li[connect|class~=simpleChoice] {
+    margin-bottom: 0.857em; /* 12px at font-size: 14px. */
+    margin-top: 0.857em; /* 12px at font-size: 14px. */
+}
+
+[connect|class~=itemBody] ul>li[connect|class~=simpleChoice]>label>input {
+    float: left;
+    margin-left: -1.429em; /* Same as line-height; 20px at font-size: 14px. */
+    height: 1.429em; /* Same as line-height; 20px at font-size: 14px. */
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] {
+    overflow: hidden; /* Expand to contain nested floats. */
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] > ul,
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] > div {
+    margin: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction][connect|author-class~="presentation-ortn-vertical"] [connect|class~=drops] > li {
+    display: inline;
+    float: left;
+    clear: none;
+    padding: 0 1em;
+	margin: 3px 3px;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction][connect|author-class~="presentation-ortn-vertical-block"] [connect|class~=drops]>li{
+    display: inline;
+    float: left;
+    padding: 0 1em;
+	margin: 3px 3px;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=drops] {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=drops] > li {
+    display: inline;
+    float: left;
+    clear: both;
+    padding: 0 1em;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] > ul > li {
+    list-style-type: none;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] > ul > li > del {
+    visibility: hidden;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=gapChoices] > ul > li {
+    list-style-type: none;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=gapChoices] > ul > li > del {
+    visibility: hidden;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=gapText],
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=gapChoices] [connect|class~=gapText] {
+    /*font-weight: bold;*/
+    /* padding-bottom: 0.3em;
+    padding-top: 0.3em; */
+    margin: 0.857em 0;
+    /*padding: 0 1em;*/
+    -moz-border-radius: 0.143em;
+    border-radius: 0.143em;
+    overflow: hidden;
+    background-color: #dde3ee;
+    background-image: -moz-linear-gradient(top, #fff, #dde3ee);
+    background-image: linear-gradient(top, #fff, #dde3ee);
+    background-repeat: repeat-x;
+    background-position: left top;
+    -moz-box-shadow: 0 0.0714em 0.143em rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.0714em 0.143em rgba(0, 0, 0, 0.25);
+	-moz-user-select: none;
+	user-select: none;
+}
+
+/* [connect|class~=itemBody] [connect|class~=gapMatchInteraction] > div [connect|class~=gapText] {
+	padding: 0 0.25em;
+    -moz-box-shadow: none;
+    box-shadow: none;
+	line-height: 1em;
+} */
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] li.title {
+	padding: 0.75em 0 0.45em 0;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] li.subtitle {
+	padding: 0.75em 0 0.45em 0;
+	font-style: italic;
+}
+
+/*[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=gapChoices] .title {
+	padding: 0.75em 0 0.45em 0;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 0.25em;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|class~=gapChoices] .subtitle {
+	padding: 0.75em 0 0.45em 0;
+	font-style: italic;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}*/
+
+[connect|class~=itemBody] [connect|class~=scroll-content] .gapTextDragger {
+	display:inline-block;
+    background-color: #dde3ee;
+    -moz-border-radius: 0.143em;
+    border-radius: 0.143em;
+	border: 1px solid #000;
+    padding: 2px 4px;
+	opacity: 0.7;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [aria-grabbed~=true] {
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    margin: 0.857em 0;
+    padding: 0 1em;
+    overflow: hidden;
+    background-color: transparent;
+    background-image: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>div{
+    float: left;
+    padding-right: 1em;
+    padding-left: 1em;
+    width: 60%;
+}
+
+[connect|class~=itemBody] [connect|author-class~=vertical]>div,
+[connect|class~=itemBody] [connect|author-class~=hsplit-none]>div{
+    width: 100%;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>div [connect|class~=gap] {
+	-moz-user-select: none;
+	user-select: none;
+	padding-bottom: 1px !important;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>ul {
+    float: right;
+    padding-left: 1em;
+    width: 40%;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>[connect|class~=gapChoices] {
+    float: right;
+    padding-left: 1em !important;
+	width: 40%;
+}
+
+[connect|class~=itemBody] [connect|author-class~=inlineGapText]>[connect|class~=gapChoices] {
+    width: 50%; 
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction][connect|author-class~="presentation-clippedRColHeight"]>[connect|class~=gapChoices] {
+    padding-bottom: 1em;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>div>:first-child,
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>ul>:first-child {
+	/* margin-top: 0; Simulate margin collapsing; 24/10/2012: commented out as it was affecting the positioning of the 'move' cursor for the first item, during dragging */
+}
+
+/*[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>div>:last-child,
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction]>ul>:last-child{
+    margin-bottom: 0;  Simulate margin collapsing
+}*/
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|availableTarget=true] {
+    border-color: #000 !important;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] .availableTarget {
+    border: 1px dashed #000 !important;
+	background-color: #fffee5 !important;
+}
+
+[connect|class~=itemBody] [connect|author-class~=gapTable] >div {
+/*	width: 55% !important; */
+	padding: 0 !important;
+}
+
+[connect|class~=itemBody] [connect|author-class~=gapTable] >ul{
+	width: 43% !important;
+	padding: 0 0 0 1% !important;
+}
+
+[connect|class~=itemBody] [connect|author-class~=gapTable] [connect|author-class~=question] { text-align: right; }
+
+[connect|class~=itemBody] [connect|author-class~=gapTable] table {
+	display: inline-block;
+	margin-right: 3em;
+	min-width: 20em;
+	table-layout: fixed;
+}
+
+[connect|class~=itemBody] [connect|author-class~=gapTable] th,
+[connect|class~=itemBody] [connect|author-class~=gapTable] td {
+	padding: 0 0 1em 0;
+	border: 0;
+	text-align: left;
+	vertical-align: top;
+	background: transparent;
+}
+
+[connect|class~=itemBody] [connect|author-class~=gapTable] th,
+[connect|class~=itemBody] [connect|author-class~=gapTable] td:last-child {
+	padding-bottom: 1.7em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=gapTable] td:first-child { padding-right: 2em; }
+
+[connect|class~=itemBody] [connect|author-class~=gapTable]>div [connect|class~=gap] { margin-top: -0.2em; }
+
+[connect|class~=itemBody] [connect|author-class~=blockGapText]>div [connect|class~=gap] {
+	height: auto;
+	font-weight: normal;
+	padding: 0 !important;
+	min-height: 2em;
+	width: 20.2em;
+	display: block;
+	margin: -0.857em 0;
+}
+
+[connect|class~=itemBody] [connect|author-class~=blockGapText]>div [connect|class~=gap].attempted {
+	/* display: block; */
+	width: auto;
+	padding: 0 !important;
+	min-height: 1em;
+}
+[connect|class~=itemBody] [connect|class~=gap].attempted ins {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=blockGapText] [connect|class~=gapText] {
+	font-weight: normal;
+}
+
+[connect|class~=itemBody] [connect|author-class~=blockGapText]>div [connect|class~=gapText] {
+	display: block;
+	margin: 0;
+	padding: 0.25em;
+	line-height: 1.429em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=blockGapText] [connect|class~=gapText] b,
+[connect|class~=itemBody] [connect|author-class~=blockGapText] [connect|class~=gapText] strong{
+	font-weight: bold;
+}
+
+[connect|class~=itemBody] [connect|author-class~=blockGapText] span[connect|author-class~=spacer] { display: none; }
+
+[connect|class~=itemBody] [connect|author-class~=cards]>div [connect|class~=gap].attempted { width: 20.2em; }
+
+[connect|class~=itemBody] [connect|author-class~=cards]>div .attempted [connect|class~=gapText] { min-height: 5em; }
+
+[connect|class~=itemBody] [connect|author-class~=cards] li[connect|class~=gapText] {
+	width: 20em;
+	min-height: 5em;
+	margin: 0.428em 0;
+}
+
+[connect|class~=itemBody] ins[connect|class~=positionObjectInteraction] {
+    position: absolute;
+}
+
+[connect|class~=itemBody] ins[connect|currentFloat=true] {
+    border: 1px solid red;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectInteraction] > div {
+    position: absolute;
+    opacity : 0;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectInteraction] > del > div {
+    position: absolute;
+    opacity : 0;
+    display: inline;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectInteraction] > object,
+[connect|class~=itemBody] [connect|class~=positionObjectInteraction] > img{
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    max-width: none;
+	cursor: move;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectInteraction] > del > object,
+[connect|class~=itemBody] [connect|class~=positionObjectInteraction] > del > img{
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    max-width: none;
+    display: inline;
+    margin: 0;
+	cursor: not-allowed;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectInteraction] > del {
+    opacity: 0.3;
+    display: block;
+    /* margin: 0.857em 0; */
+    margin: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectDrop] {
+    position: relative;
+	float: left;
+}
+[connect|class~=itemBody] [connect|class~=positionObjectDrop] > object,
+[connect|class~=itemBody] [connect|class~=positionObjectDrop] > img {
+    border: white 1px solid;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectList] {
+	float: left;
+    margin-left: 5em;
+	position: relative;
+}
+[connect|class~=itemBody] [connect|class~=positionObjectList] li {
+    list-style-type: none;
+	margin: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectStage] object,
+[connect|class~=itemBody] [connect|class~=positionObjectStage] img {
+    margin: 0;
+}
+[connect|class~=itemBody] [connect|class~=positionObjectStage] svg|svg.areasDisplay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+[connect|class~=itemBody] [connect|class~=positionObjectStage] .availableTarget,
+[connect|class~=itemBody] [connect|class~=positionObjectStage] [connect|availableTarget=true] { outline: 1px dashed #000; }
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] [connect|availableTarget=true] { border-color: #000 !important; }
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] .availableTarget {
+    border: 1px dashed #000 !important;
+	background-color: #fffee5 !important;
+}
+
+[connect|class~=itemBody] [connect|class~=positionObjectStage] { position: relative; }
+
+[connect|class~=itemBody] [connect|class~=positionObjectStage] > object {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    max-width: none;
+}
+
+[connect|class~=itemBody] div.positionObjectsDataView {
+    float:left;
+    margin-left:10em;
+}
+[connect|class~=itemBody] div.positionObjectsDataView table {
+    margin:0;
+}
+[connect|class~=itemBody] div.positionObjectsDataView table tbody tr.template {
+    display: none;
+}
+
+[connect|class~=itemBody] [connect|class~=columns] {
+    overflow: hidden;
+}
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=column] {
+    float: left;
+}
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row],
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] *,
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=column],
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=column] * {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+[connect|class~=itemBody] [connect|author-class~="genericTwoColumn"] > div,
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] [connect|class~=scroll-container] {
+	padding: 0 0.75em !important;
+	overflow-y:auto !important;
+	overflow-x:hidden !important;
+}
+
+/* accordion widget in left/right side */
+[connect|class~=itemBody] [connect|author-class~="genericTwoColumn"] [connect|author-class~="left"] > .ui-accordion,
+[connect|class~=itemBody] [connect|author-class~="genericTwoColumn"] [connect|author-class~="right"] > .ui-accordion,
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] .ui-accordion,
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=column] .ui-accordion {
+	margin-top: 1.0em;
+	/* padding: 0 1em; */
+}
+
+/* choice-presentation right side */
+[connect|class~=itemBody] [connect|author-class~="genericTwoColumn"] [connect|author-class~="right"] > [connect|class~=question],
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] [connect|class~=scroll-container] [connect|class~=question] {
+	padding-left: 0;
+    padding-right: 0;
+	/* margin-left: 1em; */
+	background-image: none;
+}
+
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] > div {
+	display:inline-block;
+	width:50%;
+	padding:0;
+	vertical-align:top;
+}
+
+/* flexbox */ /* CURRENTLY NOT USED - CONNECT CAN'T SUPPORT IT */
+/*
+[connect|class~=itemBody] [connect|class~=columns] {
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	-moz-box-flex: 1;
+	margin-top:0;
+}
+
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] {
+	display: -moz-box;
+	-moz-box-sizing: border-box;
+	-moz-box-orient: horizontal;
+	-moz-box-flex: 1;
+}
+
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] > div {
+	-moz-box-flex: 1;
+	width:1000px;
+	padding: 0 1em;
+}
+*/
+
+/* Compensate for additional margin caused by floating. */
+[connect|class~=itemBody] p + [connect|class~=columns],
+[connect|class~=itemBody] h1 + [connect|class~=columns],
+[connect|class~=itemBody] h3 + [connect|class~=columns],
+[connect|class~=itemBody] h4 + [connect|class~=columns],
+[connect|class~=itemBody] h5 + [connect|class~=columns],
+[connect|class~=itemBody] h6 + [connect|class~=columns],
+[connect|class~=itemBody] table + [connect|class~=columns],
+[connect|class~=itemBody] ul + [connect|class~=columns],
+[connect|class~=itemBody] ol + [connect|class~=columns],
+[connect|class~=itemBody] dl + [connect|class~=columns],
+[connect|class~=itemBody] blockquote + [connect|class~=columns],
+[connect|class~=itemBody] video + [connect|class~=columns],
+[connect|class~=itemBody] object + [connect|class~=columns],
+[connect|class~=itemBody] svg|svg + [connect|class~=columns],
+[connect|class~=itemBody] math|math + [connect|class~=columns],
+[connect|class~=itemBody]
+        [connect|class~=rubricBlock] + [connect|class~=columns],
+[connect|class~=itemBody]
+        [connect|class~=blockInteraction] + [connect|class~=columns],
+[connect|class~=itemBody]
+        [connect|class~=calculator] + [connect|class~=columns] {
+    margin-top: -0.857em; /* -12px at font-size: 14px */
+}
+
+/* Compensate for additional margin caused by floating. */
+[connect|class~=itemBody] [connect|class~=columns] + p,
+[connect|class~=itemBody] [connect|class~=columns] + h3,
+[connect|class~=itemBody] [connect|class~=columns] + h4,
+[connect|class~=itemBody] [connect|class~=columns] + h5,
+[connect|class~=itemBody] [connect|class~=columns] + h6,
+[connect|class~=itemBody] [connect|class~=columns] + table,
+[connect|class~=itemBody] [connect|class~=columns] + ul,
+[connect|class~=itemBody] [connect|class~=columns] + ol,
+[connect|class~=itemBody] [connect|class~=columns] + dl,
+[connect|class~=itemBody] [connect|class~=columns] + blockquote,
+[connect|class~=itemBody] [connect|class~=columns] + video,
+[connect|class~=itemBody] [connect|class~=columns] + object,
+[connect|class~=itemBody] [connect|class~=columns] + svg|svg,
+[connect|class~=itemBody] [connect|class~=columns] + math|math,
+[connect|class~=itemBody]
+        [connect|class~=columns] + [connect|class~=rubricBlock],
+[connect|class~=itemBody]
+        [connect|class~=columns] + [connect|class~=blockInteraction],
+[connect|class~=itemBody]
+        [connect|class~=columns] + [connect|class~=calculator],
+[connect|class~=itemBody]
+        [connect|class~=columns] + [connect|class~=container] {
+    margin-top: 0;
+}
+
+[connect|class~=itemBody] p.caption {
+	font-weight:bold;
+}
+
+[connect|class~=itemBody] [connect|class~=info],
+[connect|class~=itemBody] [connect|class~=action],
+[connect|class~=itemBody] [connect|author-class~=action],
+[connect|class~=itemBody] [connect|class~=question] ,
+[connect|class~=itemBody] [connect|class~=prompt],
+[connect|class~=itemBody] [connect|author-class~=prompt] {
+    /* margin-left: -0.143em; -2px at font-size: 14px. */
+    /* margin-right: -0.143em; -2px at font-size: 14px. */
+    /* padding-left: 1.571em; 22px at font-size: 14px. */
+    /* padding-right: 1.571em; 22px at font-size: 14px. */
+    background-repeat: no-repeat;
+    -moz-background-size: 1.143em; /* 16px at font-size: 14px */
+    background-size: 1.143em; /* 16px at font-size: 14px */
+    background-position: 0 0.4em; /* 0 2px at font-size: 14px
+            (These values center the image up nicely with the text) */
+}
+
+[connect|class~=itemBody] [connect|class~=sample] {
+    padding: 0.5em 1em;
+    border: solid 1px rgba(0, 0, 0, .9);
+    margin: 1em 0;
+}
+
+[connect|class~=itemBody] [connect|class~=info] {
+    background-image: url(../images/info-icon-16.png);
+}
+
+/*
+[connect|class~=itemBody] [connect|class~=action],
+[connect|class~=itemBody] [connect|author-class~=action] {
+    background-image: url(../images/item/action-icon-16.png);
+}
+*/
+
+[connect|class~=itemBody] [connect|class~=question] {
+    background-image: url(../images/question-icon-16.png);
+}
+
+[connect|class~=itemBody] [connect|class~=interaction] [connect|class~=prompt],
+[connect|class~=itemBody] [connect|author-class~=interaction] [connect|class~=prompt],
+[connect|class~=itemBody] [connect|class~=prompt] [connect|class~=interaction] > p,
+[connect|class~=itemBody] [connect|author-class~=prompt] [connect|class~=interaction] > p {
+	padding-left:0;
+}
+
+[connect|class~=itemBody] ins[connect|class~=gapImg] {
+    position: absolute;
+}
+
+[connect|class~=itemBody] [connect|class~=gapImg]>div {
+    position: absolute;
+    margin: 0;
+    opacity : 0;
+}
+
+[connect|class~=itemBody] [connect|class~=gapImg]>object {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    max-width: none;
+    margin: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=gapImg]>del>div {
+    margin: 0;
+    position: absolute;
+    opacity : 0;
+}
+
+[connect|class~=itemBody] [connect|class~=gapImg]>del>object {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    max-width: none;
+    margin: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=gapImg]>del {
+    opacity: 0.3;
+}
+
+[connect|class~=itemBody] [connect|class~=associableHotspot] {
+    position: absolute;
+    margin: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction] {
+    overflow: hidden; /* Expand to contain nested floats. */
+    position: relative;
+    margin: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>ul,
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>div {
+    margin: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>ul>li {
+    margin: 0.857em 0; /* 12px 0 at font-size: 14px */
+    list-style-type: none;
+}
+
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>ul>li>del {
+    visibility: hidden;
+}
+
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>ul {
+    margin-bottom: 0.857em; /* 12px at font-size: 14px */
+    float: left;
+    padding-right: 1em;
+    width: 60%;
+}
+
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>div {
+    float: right;
+    padding-left: 1em;
+    width: 40%;
+}
+
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>div>:first-child,
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>ul>:first-child
+    margin-top: 0; /* Simulate margin collapsing */
+}
+
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>div>:last-child,
+[connect|class~=itemBody] [connect|class~=graphicGapMatchInteraction]>ul>:last-child{
+    margin-bottom: 0; /* Simulate margin collapsing */
+}
+
+[connect|class~=itemBody] [connect|class~="matchInteraction"] {
+    /*position: relative;*/
+    display: inline-block;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] > p.prompt {
+	margin: 0 0 0.75em;
+	/* width: 100%; */
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match {
+    display: flex;
+    justify-content: center;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div {
+    display: flex;
+    flex-direction: column;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div > .title {
+    height: 3.0rem;
+    margin: 0 0 0.25em;
+    padding: 4px 8px;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div > h4.title {
+    background: #c3d9ff;
+    border: 2px solid #888;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div.connectors {
+    width: 100px;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div.connectors > .title {
+    visibility: hidden;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div.connectors > .connectors-container {
+    flex-grow: 4;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div > ol {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 0;
+    flex-grow: 4;
+    margin: 0;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div > ol > li {
+    border: 1px solid #888;
+    cursor: pointer;
+    flex-grow: 1;
+    margin: 2px 0;
+    padding: 4px 8px;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div > .title,
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div > ol > li {
+    /*Vertical and horizontal centering*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+[connect|class~=itemBody] [connect|class~="matchInteraction"] .line-match > div > ol > li[connect|class~="highlightText"] {
+	background-color: #ffffe0;
+}
+
+[connect|class~=itemBody] [connect|class~="matchInteraction"] svg|svg {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+[connect|class~=itemBody] [connect|class~="matchInteraction"] svg|line{
+    stroke: #0370a7;
+    stroke-width: 3px;
+}
+
+[connect|class~=itemBody] [connect|class~="matchInteraction"] svg|circle{
+    fill: #0370a7;
+    stroke-width: 2px;
+}
+
+[connect|class~=itemBody] [connect|class~="matchInteraction"] [connect|class~=associableChoice] {
+    cursor: pointer;
+}
+
+[connect|class~=itemBody] [connect|class~="matchInteraction"] [connect|class~=associableChoice] img:first-child {
+    display: block;
+}
+
+[connect|class~=itemBody] [connect|function~=selector] {
+    width: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+[connect|class~=itemBody] [connect|class~=questionSequence],
+[connect|class~=itemBody] [connect|author-class~=questionSequence] {
+    display:block;
+    margin-bottom:0.857em;
+    text-align:right;
+    text-indent:0;
+}
+
+[connect|class~=itemBody] [connect|class~=itemNumber] {
+    font-weight:bold;
+    padding-bottom:0.3em;
+    padding-top:0.3em;
+    display:inline;
+}
+
+[connect|class~=floatingToolContainer] [connect|class~=itemNumber] {
+    display:none;
+}
+
+[connect|class~=itemBody] .highlighted {
+    background-color: #ff0;
+}
+
+[connect|class~=itemBody] [connect|class~=container] [connect|class~=confirmForm] {
+    float: left;
+    clear: both;
+    margin: 2em 0;
+}
+
+[connect|class~=itemBody] td.checked {
+    background-image: url("../images/chk_on.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+[connect|class~=itemBody] [connect|class~=deleteLine] {
+    background-image: url("../images/delete_line.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 11px;
+}
+
+[connect|class~=itemBody] [connect|author-class~=textChain] [connect|author-class~=upArrow],
+[connect|class~=itemBody] [connect|author-class~=textChain] [connect|author-class~=downArrow] {
+    border-left: none;
+    border-right: none;
+    height: 25px;
+    background-image: url("../images/up-arrow.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+[connect|class~=itemBody] [connect|author-class~=textChain] [connect|author-class~=downArrow] {
+    background-image: url("../images/down-arrow.png");
+}
+
+[connect|class~=itemBody] [connect|author-class~=center] {
+    text-align: center;
+}
+
+[connect|author-class~=halfSpace] {
+    display: inline-block;
+    width: 0.1em;
+}
+
+/*[connect|author-class~=highlight] {
+    padding: 0.75em;
+    -moz-border-radius: 0.357em;
+    border-radius: 0.357em;
+    background-color: #dde3ee;
+}*/
+
+[connect|class~=textRight] {
+	text-align: right;
+}
+
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"],
+[connect|class~=itemBody] .inlineChoiceGroup {
+	line-height:3em;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] [connect|author-class~=title],
+[connect|class~=itemBody] .inlineChoiceGroup [connect|author-class~=title] {
+	line-height:1.429em;
+}
+[connect|class~=itemBody] [connect|author-class~="withKeywordsList"],
+[connect|class~=itemBody] [connect|author-class~="inlineTextEntry"],
+[connect|class~=itemBody] .textEntryGroup,
+[connect|class~=itemBody] .keywordsList {
+	line-height:3em;	/* same as inlineChoice line-height */
+}
+
+[connect|class~=itemBody] [connect|class~=gap] {
+	position:relative;
+	height:1.42em;
+}
+
+[connect|class~=itemBody] span[connect|author-class~=spacer],
+[connect|class~=itemBody] span.spacer {
+	position: absolute;
+}
+
+[connect|class~=itemBody] span.questionNumber {
+	float:left;
+	font-weight:bold;
+	padding: 0 0.2em;
+	display: inline-block;
+	min-width: 1.6em;
+}
+[connect|class~=itemBody] div[connect|class~=tableMatchInteraction] table th span.questionNumber {
+	margin-right:0.25em;
+	cursor: pointer;
+}
+[connect|class~=itemBody] [connect|class~=inlineInteraction] span.questionNumber,
+[connect|class~=itemBody] [connect|class~=gap] span.questionNumber {
+	float:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	line-height:1.2em;
+	text-align:center;
+	-moz-user-select: none;
+	user-select: none;
+	margin:0;
+	padding:0;
+}
+
+[connect|class~=itemBody] [connect|author-class~=blockGapText] span.questionNumber { line-height: 2em; }
+
+[connect|class~=itemBody] [connect|class~=inlineInteraction].inFocus span.questionNumber,
+[connect|class~=itemBody] [connect|class~=inlineInteraction].attempted span.questionNumber,
+[connect|class~=itemBody] [connect|class~=inlineInteraction].bardo span.questionNumber,
+[connect|class~=itemBody] [connect|class~=gap].inFocus span.questionNumber,
+[connect|class~=itemBody] [connect|class~=gap].attempted span.questionNumber {
+	display:none;
+}
+[connect|class~=itemBody] [connect|class~=scroll-container] > span.questionNumber {
+	margin-top:0.857em;
+}
+
+[connect|class~=itemBody] div > span.questionNumber { margin-top: 0.429em; }
+
+[connect|class~=itemBody] div.separateStimulus:not(.active) { display: none; }
+[connect|class~=itemBody] div.separateStimulus > p { display: none; }
+[connect|class~=itemBody] div.separateStimulus > p.inFocus { display: block; }
+[connect|class~=itemBody] div.separateStimulus > p span.qn { width: 2em; float: left; margin-left: -2em; }
+
+[connect|class~=itemBody] [connect|class~="tableMatchInteraction"][connect|author-class~=separateStimulus] { padding-left: 2em; }
+[connect|class~=itemBody] [connect|author-class~=separateStimulus] table { margin: 0 0 1em 0 !important; }
+
+/* Legacy inline-choice popup styling */
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice dt {
+	min-width:5em;
+	border-bottom:1px solid #000;
+	display:inline-block;
+	cursor:pointer;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-topright: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	text-align:center;
+	line-height:1.5em;
+}
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice dt a {
+	margin:auto 0.3em;
+}
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice dt:hover,
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice dt:active,
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice dt.active {
+	background:#fff;
+	border-bottom:1px solid #34B2F1;
+}
+
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice,
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice dd {
+	display:inline-block;
+	margin:0;
+	padding:0;
+	position:relative;
+	overflow:visible;
+}
+
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice {
+	margin:0 0.5em 0 0.2em;
+}
+
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice ul {
+	margin:0;
+	padding:0.2em 5px;
+	background:#fff;
+	list-style-type: none;
+	border:1px solid #ddd;
+    -moz-border-radius: 0.357em; /* 5px at font-size: 14px */
+    border-radius: 0.357em; /* 5px at font-size: 14px */
+	line-height:1em;
+	position: absolute;
+	z-index: 3;
+	bottom: 1em;
+	white-space: nowrap;
+	/*width:500px;*/
+}
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li {
+	margin: 0 10px;
+	padding: 0;
+	display: inline;
+}
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li a {
+	color:#000;
+	display:inline-block;
+}
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice dt span,
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li a span {
+	display:none;
+}
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li a:hover,
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li a:active {
+	text-decoration:underline;
+}
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li  a.clear {
+	background:url("../images/delete.png") no-repeat left bottom;
+	width:16px;
+	height:16px;
+	text-decoration:none;
+}
+
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li  a.clear:hover,
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li  a.clear:active {
+	text-decoration:none;
+	background-image:url("../images/deleteActive.png");
+}
+
+[connect|class~=itemBody] .inlineChoiceGroup dl.inlineChoice li  a.clear span {
+	position:absolute;
+	top:-9999px;
+	left:-9999px;
+}
+
+[connect|class~=itemBody] .inlineChoiceGroup img {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+
+/* New styling for inline-choice popups based on updated container markup */
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice dt {
+	min-width:5em;
+	border-bottom:1px solid #000;
+	display:inline-block;
+	cursor:pointer;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-topright: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	text-align:center;
+	line-height:1.5em;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice dt a {
+	margin:auto 0.3em;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice dt:hover,
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice dt:active,
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice dt.active {
+	background:#fff;
+	border-bottom:1px solid #34B2F1;
+}
+
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice,
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice dd {
+	display:inline-block;
+	margin:0;
+	padding:0;
+	position:relative;
+	overflow:visible;
+}
+
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice {
+	margin:0 0.5em 0 0.2em;
+}
+
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice ul {
+	margin:0;
+	padding:0.2em 5px;
+	background:#fff;
+	list-style-type: none;
+	border:1px solid #ddd;
+    -moz-border-radius: 0.357em; /* 5px at font-size: 14px */
+    border-radius: 0.357em; /* 5px at font-size: 14px */
+	line-height:1em;
+	position: absolute;
+	z-index: 3;
+	bottom: 1em;
+	white-space: nowrap;
+	/*width:500px;*/
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li {
+	margin: 0 10px;
+	padding: 0;
+	display: inline;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li a {
+	color:#000;
+	display:inline-block;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice dt span,
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li a span {
+	display:none;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li a:hover,
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li a:active {
+	text-decoration:underline;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li  a.clear {
+	background:url("../images/delete.png") no-repeat left bottom;
+	width:16px;
+	height:16px;
+	text-decoration:none;
+}
+
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li  a.clear:hover,
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li  a.clear:active {
+	text-decoration:none;
+	background-image:url("../images/deleteActive.png");
+}
+
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] dl.inlineChoice li  a.clear span {
+	position:absolute;
+	top:-9999px;
+	left:-9999px;
+}
+
+[connect|class~=itemBody] [connect|author-class~="presentation-horizontalPopup"] img {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+
+
+[connect|class~=itemBody] ol.keywordsList {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+[connect|class~=itemBody] ol.keywordsList li {
+	list-style-type: none;
+	border: 1px solid transparent;
+}
+
+[connect|class~=itemBody] .letters {
+	border: 0;
+}
+
+[connect|class~=itemBody] .letters thead {
+	display: none;
+}
+
+[connect|class~=itemBody] .letters td {
+	padding: 0 0 1em 0;
+	border: 0;
+	text-align: left;
+	vertical-align: top;
+}
+
+
+[connect|class~=itemBody] .letters td:first-child { padding-right: 3em; }
+
+[connect|class~=itemBody] .letters td:first-child p { margin: 0 0 0 2.5em; }
+
+[connect|class~=itemBody] .letters span.questionNumber { min-width: 2em; }
+
+[connect|class~=itemBody] .letters span[connect|class~=textEntryInteraction] { background: transparent !important; }
+
+[connect|class~=itemBody] .letters div {
+	-moz-user-select: none;
+	white-space: nowrap;
+}
+
+[connect|class~=itemBody] .letters div span {
+	margin: 0.37em 0.5em 0 0;
+	border-bottom: 2px solid transparent;
+	display: inline-block;
+	vertical-align: bottom;
+	width: 1.25em;
+	height: 1.5em;
+	text-align: center;
+	color: #666;
+}
+
+[connect|class~=itemBody] .letters div span.dash { border-bottom: 2px solid #666; }
+
+[connect|class~=itemBody] .letters .inFocus div span { color: #000; }
+
+[connect|class~=itemBody] .letters .inFocus div span.dash,
+[connect|class~=itemBody] .letters div span.dash:hover,
+[connect|class~=itemBody] .letters div span.dash:active {
+	border-bottom-color: #34B2F1;
+}
+
+@-moz-keyframes blink {
+  0% { border-bottom-color: #34B2F1; }
+  49% { border-bottom-color: #34B2F1; }
+  51% { border-bottom-color: #369; }
+  100% { border-bottom-color: #369; }
+}
+
+[connect|class~=itemBody] .letters div span.dash:focus {
+    -moz-animation: blink 2s linear 0s infinite;
+	animation: blink 2s linear 0s infinite;
+	border-bottom-color: #34B2F1;
+	background-color: rgba(181, 234, 255, 0.5);
+}
+
+[connect|class~=itemBody]  .letters [connect|state~=placeholder] { font-style: normal; }
+
+[connect|class~=itemBody] em[connect|author-class~=highlight] {
+	border: 1px solid transparent;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    padding: 0.1em 0.1em;
+	font-style: normal;
+}
+
+/* Needed to counter font-style: normal in less specific em (highlight) template */
+[connect|class~=itemBody] i em[connect|author-class~=highlight] {
+	border: 1px solid transparent;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    padding: 0.1em 0.1em;
+	font-style:italic;
+}
+
+/* [connect|class~=itemBody] .horizontalChoice,
+[connect|class~=itemBody] .horizontalChoice * { -moz-user-select: none; }
+
+[connect|class~=itemBody] .horizontalChoice ul {
+	padding: 1em 0 0 0;
+}
+
+[connect|class~=itemBody] .horizontalChoice li {
+	display: inline-block;
+	text-align: center;
+}
+
+[connect|class~=itemBody] .horizontalChoice span.questionNumber { margin-top: 0.429em !important; }
+
+[connect|class~=itemBody] .horizontalChoice img {
+	margin: auto;
+	height: auto;
+	display: inline-block;
+}
+
+[connect|class~=itemBody] .horizontalChoice li img.selected { outline: 6px solid #189CDD; } */
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions],
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions] * {
+	-moz-user-select: none;
+}
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions] ul {
+	/* padding: 1em 0 0 0; */
+	padding: 0;
+	margin-top: 0;
+	margin-left: 0;
+}
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions] ul > li[connect|class~="simpleChoice"] > label > input {
+	margin-left: 0;
+}
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions] ul > li[connect|class~="simpleChoice"] > label > p {
+	margin-left: 0.5em;
+	margin-right: 2.0em;
+}
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions] li {
+	display: inline-block;
+	text-align: center;
+}
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions] span.questionNumber { margin-top: 0.429em !important; }
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions] img {
+	margin: auto;
+	height: auto;
+	display: inline-block;
+}
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalOptions] li img.selected { outline: 6px solid #189CDD; }
+
+/* [connect|class~=itemBody] [connect|author-class~=horizontalText] {
+	width: 60em;
+	margin: 1em 0;
+	position: relative;
+    -moz-border-radius: 0.357em;
+    border-radius: 0.357em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=horizontalText] span.questionNumber {
+	position: absolute;
+	margin-top: 0.429em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=horizontalText] p[connect|class~=prompt] {
+	display: inline-block;
+	width: 75%;
+}
+
+[connect|class~=itemBody] [connect|author-class~=horizontalText].inFocus p[connect|class~=prompt] { background-image: none !important; }
+
+[connect|class~=itemBody] [connect|author-class~=horizontalText] ul {
+	display: inline-block;
+	width: 17%;
+	margin: 0 0 0 1.429em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=horizontalText] li {
+	display: inline-block;
+	width: 49%;
+	margin: 0 !important;
+} */
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] {
+	width: 60em;
+	margin: 1em 0;
+	position: relative;
+    -moz-border-radius: 0.357em;
+    border-radius: 0.357em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] span.questionNumber {
+	position: absolute;
+	margin-top: 0.429em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] p[connect|class~=prompt] {
+	display: inline-block;
+	width: 75%;
+}
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions].inFocus p[connect|class~=prompt] {
+	background-image: none !important;
+}
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] ul {
+	display: inline-block;
+	width: 17%;
+	margin: 0 0 0 1.429em;
+	padding-left: 0;
+}
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] ul > li[connect|class~="simpleChoice"] > label > input {
+	margin-left: 0;
+}
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] ul > li[connect|class~="simpleChoice"] > label > p {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] li {
+	display: inline-block;
+	width: 49%;
+	margin: 0 !important;
+}
+
+[connect|class~=itemBody] div p[connect|class~=prompt] {
+	padding: 0.429em 1em;
+	margin:0;
+}
+[connect|class~=itemBody] h3.ui-accordion-header p.prompt {
+	margin:0;
+	font-weight: normal;
+}
+[connect|class~=itemBody] h3.ui-accordion-header p.prompt+span.questionNumber {
+	padding-right: 1em;
+}
+
+[connect|class~=itemBody] div span.questionNumber+p[connect|class~=prompt],
+[connect|class~=itemBody] h3.ui-accordion-header span.questionNumber+p.prompt,
+[connect|class~=itemBody] [connect|author-class~=separateStimulus] span.questionNumber+p.prompt {
+	padding-left: 1.8em !important;
+	min-height: 1.45em;
+}
+[connect|class~=itemBody] [connect|author-class~=separateStimulus] span.questionNumber+p.prompt { min-height: 4.5em; }
+[connect|class~=itemBody] div p[connect|class~=prompt] p {
+	margin:0 0 1em 0;
+}
+[connect|class~=itemBody] [connect|class~=columns] [connect|class~=row] > div:first-child p[connect|class~=prompt] {
+	margin-right:0.5em;
+}
+
+/* [connect|class~=itemBody] span.inFocus input,
+[connect|class~=itemBody] input.inFocus,
+[connect|class~=itemBody] span[connect|class~=textEntryInteraction].inFocus span.input, */
+[connect|class~=itemBody] span[connect|class~=textEntryInteraction].inFocus,
+[connect|class~=itemBody] span[connect|class~=textEntryProxy].inFocus,
+[connect|class~=itemBody] .inlineChoiceGroup span.inFocus dl.inlineChoice dt,
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPopup] span.inFocus dl.inlineChoice dt,
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] span.inFocus dl.inlineChoice dt,
+[connect|class~=itemBody] td.inFocus,
+[connect|class~=itemBody] em[connect|author-class~=highlight].inFocus,
+[connect|class~=itemBody] ol.keywordsList li.inFocus,
+[connect|class~=itemBody]>div [connect|class~=gap].inFocus {
+	-moz-transition:background-color 1s;
+	transition:background-color 1s;
+    background-color:rgba(181, 234, 255, 0.5);
+}
+
+/* [connect|class~=itemBody] [connect|author-class~=horizontalText].inFocus { */
+[connect|class~=itemBody] div.inFocus p[connect|class~=prompt],
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions].inFocus {
+	background-image: -moz-linear-gradient(top, #fff, #abe5fd);
+    background-image: linear-gradient(top, #fff, #abe5fd);
+	background-position: top left;
+	background-repeat: repeat-x;
+    -moz-background-size: auto;
+    background-size: auto;
+}
+
+[connect|class~=itemBody] .inlineChoiceGroup span.inFocus dl.inlineChoice dt,
+[connect|class~=itemBody] [connect|author-class~=presentation-horizontalPromptOptions] span.inFocus dl.inlineChoice dt {
+	border-bottom:1px solid #34B2F1;
+    background-color:rgba(181, 234, 255, 0.75);
+}
+[connect|class~=itemBody] input.inFocus,
+[connect|class~=itemBody] span.inFocus input,
+[connect|class~=itemBody] span.inFocus span.input,
+[connect|class~=itemBody] ol.keywordsList li.inFocus {
+	border: 1px solid #34B2F1;
+}
+
+[connect|class~=itemBody] em.inFocus {
+    background-color:rgba(181, 234, 255, 0.75);
+	border-color:#34B2F1;
+}
+
+[connect|class~=itemBody] [connect|class~=gapMatchInteraction] .inFocus [connect|class~=gapText] { background: none; }
+
+.accdChoiceMessage {
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+
+/* [connect|class~=itemBody] div[connect|author-class~=genericTwoColumn] {
+	display:flex;
+	flex-flow: row wrap;
+}
+[connect|class~=itemBody] div[connect|author-class~=genericTwoColumn] > div {
+	-webkit-flex: 1 1 50%;
+           flex: 1 1 50%;
+} */
+
+[connect|class~=itemBody] [connect|author-class~=twoColChoice],
+[connect|class~=itemBody] [connect|author-class~=twoColChoice] *,
+[connect|class~=itemBody] [connect|author-class*="split-"],
+[connect|class~=itemBody] [connect|author-class~=genericTwoColumn],
+[connect|class~=itemBody] [connect|author-class~=genericTwoColumn] * {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+[connect|class~=itemBody] [connect|author-class*="split-"]:after {
+	content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;
+}
+[connect|class~=itemBody] [connect|author-class~=twoColChoice] > div,
+[connect|class~=itemBody] [connect|author-class~=genericTwoColumn] > div {
+    width: 50%;
+	/* padding: 8px 4px; */
+}
+[connect|class~=itemBody] [connect|author-class~=twoColChoice] > div {
+	float: left;
+}
+[connect|class~=itemBody] [connect|author-class*="split-"] > *:first-child,
+[connect|class~=itemBody] [connect|author-class~=genericTwoColumn] > div[connect|author-class~=left] {
+	float: left;
+}
+[connect|class~=itemBody] [connect|author-class*="split-"] > *:last-child,
+[connect|class~=itemBody] [connect|author-class~=genericTwoColumn] > div[connect|author-class~=right] {
+	float: right;
+}
+
+[connect|class~=itemBody] [connect|author-class~="hsplit-none"] > [connect|author-class~=right],
+[connect|class~=itemBody] [connect|author-class~="hsplit-none"] > [connect|author-class~=left],
+[connect|class~=itemBody] [connect|author-class~="split-none"] > * {
+	float: none !important;
+}
+
+[connect|class~=itemBody] [connect|author-class*="split-"] > *:last-child {
+	padding-left: 4px;
+}
+[connect|class~=itemBody] [connect|author-class*="split-"] > *:first-child {
+	padding-right: 4px;
+}
+[connect|class~=itemBody] [connect|author-class~="divider"] > p {
+	margin: 0 0 0.5em;
+}
+
+/* Partitioning style rules: START */
+/* OLD */
+[connect|class~=itemBody] [connect|author-class~="hsplit-1090"] > [connect|author-class~=left] {
+	width: 10%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-1090"] > [connect|author-class~=right] {
+	width: 90%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-1585"] > [connect|author-class~=left] {
+	width: 15%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-1585"] > [connect|author-class~=right] {
+	width: 85%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-2080"] > [connect|author-class~=left] {
+	width: 20%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-2080"] > [connect|author-class~=right] {
+	width: 80%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-2575"] > [connect|author-class~=left] {
+	width: 25%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-2575"] > [connect|author-class~=right] {
+	width: 75%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-3070"] > [connect|author-class~=left] {
+	width: 30%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-3070"] > [connect|author-class~=right] {
+	width: 70%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-3565"] > [connect|author-class~=left] {
+	width: 35%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-3565"] > [connect|author-class~=right] {
+	width: 65%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-4060"] > [connect|author-class~=left] {
+	width: 40%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-4060"] > [connect|author-class~=right] {
+	width: 60%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-4555"] > [connect|author-class~=left] {
+	width: 45%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-4555"] > [connect|author-class~=right] {
+	width: 55%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-5050"] > [connect|author-class~=left],
+[connect|class~=itemBody] [connect|author-class~="hsplit-5050"] > [connect|author-class~=right] {
+	width: 50%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-5545"] > [connect|author-class~=left] {
+	width: 55%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-5545"] > [connect|author-class~=right] {
+	width: 45%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-6040"] > [connect|author-class~=left] {
+	width: 60%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-6040"] > [connect|author-class~=right] {
+	width: 40%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-6535"] > [connect|author-class~=left] {
+	width: 65%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-6535"] > [connect|author-class~=right] {
+	width: 35%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-7030"] > [connect|author-class~=left] {
+	width: 70%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-7030"] > [connect|author-class~=right] {
+	width: 30%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-7525"] > [connect|author-class~=left] {
+	width: 75%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-7525"] > [connect|author-class~=right] {
+	width: 25%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-8020"] > [connect|author-class~=left] {
+	width: 80%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-8020"] > [connect|author-class~=right] {
+	width: 20%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-8515"] > [connect|author-class~=left] {
+	width: 85%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-8515"] > [connect|author-class~=right] {
+	width: 15%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-9010"] > [connect|author-class~=left] {
+	width: 90%;
+}
+[connect|class~=itemBody] [connect|author-class~="hsplit-9010"] > [connect|author-class~=right] {
+	width: 10%;
+}
+
+/* NEW */
+[connect|class~=itemBody] [connect|author-class~="split-1090"] > div:first-child {
+	width: 10%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-1090"] > div:nth-child(2) {
+	width: 90%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-1585"] > div:first-child {
+	width: 15%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-1585"] > div:nth-child(2) {
+	width: 85%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-2080"] > div:first-child {
+	width: 20%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-2080"] > div:nth-child(2) {
+	width: 80%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-2575"] > div:first-child {
+	width: 25%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-2575"] > div:nth-child(2) {
+	width: 75%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-3070"] > div:first-child {
+	width: 30%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-3070"] > div:nth-child(2) {
+	width: 70%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-3565"] > div:first-child {
+	width: 35%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-3565"] > div:nth-child(2) {
+	width: 65%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-4060"] > div:first-child {
+	width: 40%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-4060"] > div:nth-child(2) {
+	width: 60%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-4555"] > div:first-child {
+	width: 45%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-4555"] > div:nth-child(2) {
+	width: 55%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-5050"] > div {
+	width: 50%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-5545"] > div:first-child {
+	width: 55%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-5545"] > div:nth-child(2) {
+	width: 45%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-6040"] > div:first-child {
+	width: 60%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-6040"] > div:nth-child(2) {
+	width: 40%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-6535"] > div:first-child {
+	width: 65%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-6535"] > div:nth-child(2) {
+	width: 35%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-7030"] > div:first-child {
+	width: 70%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-7030"] > div:nth-child(2) {
+	width: 30%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-7525"] > div:first-child {
+	width: 75%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-7525"] > div:nth-child(2) {
+	width: 25%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-8020"] > div:first-child {
+	width: 80%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-8020"] > div:nth-child(2) {
+	width: 20%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-8515"] > div:first-child {
+	width: 85%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-8515"] > div:nth-child(2) {
+	width: 15%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-9010"] > div:first-child {
+	width: 90%;
+}
+[connect|class~=itemBody] [connect|author-class~="split-9010"] > div:nth-child(2) {
+	width: 10%;
+}
+
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class*="split-"],
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class*="split-"]  {
+	height: 100%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-none"],
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-none"] {
+	height: auto;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class*="split-"] > div,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class*="split-"] > div  {
+	float: none !important;
+	/*overflow-y: scroll;*/
+	width: 100%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class*="split-"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class*="split-"] > div:last-child  {
+	border-top: 1px solid #ddd;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-1090"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-1090"] > div:first-child  {
+	height: 10%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-1090"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-1090"] > div:last-child  {
+	height: 90%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-1585"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-1585"] > div:first-child  {
+	height: 15%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-1585"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-1585"] > div:last-child  {
+	height: 85%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-2080"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-2080"] > div:first-child  {
+	height: 20%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-2080"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-2080"] > div:last-child  {
+	height: 80%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-2575"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-2575"] > div:first-child  {
+	height: 25%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-2575"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-2575"] > div:last-child {
+	height: 75%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-3070"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-3070"] > div:first-child {
+	height: 30%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-3070"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-3070"] > div:last-child  {
+	height: 70%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-3565"] > div:first-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-3565"] > div:first-child{
+	height: 35%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-3565"] > div:last-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-3565"] > div:last-child {
+	height: 65%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-4060"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-4060"] > div:first-child  {
+	height: 40%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-4060"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-4060"] > div:last-child  {
+	height: 60%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-4555"] > div:first-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-4555"] > div:first-child {
+	height: 45%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-4555"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-4555"] > div:last-child {
+	height: 55%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-5050"] > div,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-5050"] > div {
+	height: 50%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-5545"] > div:first-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-5545"] > div:first-child{
+	height: 55%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-5545"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-5545"] > div:last-child  {
+	height: 45%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-6040"] > div:first-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-6040"] > div:first-child{
+	height: 60%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-6040"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-6040"] > div:last-child  {
+	height: 40%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-6535"] > div:first-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-6535"] > div:first-child {
+	height: 65%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-6535"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-6535"] > div:last-child {
+	height: 35%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-7030"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-7030"] > div:first-child {
+	height: 70%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-7030"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-7030"] > div:last-child  {
+	height: 30%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-7525"] > div:first-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-7525"] > div:first-child {
+	height: 75%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-7525"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-7525"] > div:last-child {
+	height: 25%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-8020"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-8020"] > div:first-child  {
+	height: 80%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-8020"] > div:last-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-8020"] > div:last-child {
+	height: 20%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-8515"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-8515"] > div:first-child {
+	height: 85%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-8515"] > div:last-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-8515"] > div:last-child {
+	height: 15%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-9010"] > div:first-child,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-9010"] > div:first-child  {
+	height: 90%;
+}
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical"][connect|author-class~="split-9010"] > div:last-child ,
+[connect|class~=itemBody] [connect|author-class~="presentation-ortn-vertical-block"][connect|author-class~="split-9010"] > div:last-child{
+	height: 10%;
+}
+
+/* Partitioning style rules: END */
+
+[connect|class~=itemBody] [connect|author-class~=accordionChoice] {
+    width: 70%;
+}
+[connect|class~=itemBody] [connect|author-class~=genericTwoColumn] [connect|author-class~=accordionChoice],
+[connect|class~=itemBody] [connect|author-class~=generic] [connect|author-class~=accordionChoice],
+[connect|class~=itemBody] [connect|author-class~=partWidth] [connect|author-class~=accordionChoice] {
+    width: 100%;
+}
+
+[connect|class~=itemBody] [connect|author-class~="partWidth"] {
+	/* display: inline-block; */
+	box-sizing: border-box;
+	padding: 0 8px;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-10"] {
+	width: 10%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-15"] {
+	width: 15%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-20"] {
+	width: 20%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-25"] {
+	width: 25%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-30"] {
+	width: 30%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-35"] {
+	width: 35%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-40"] {
+	width: 40%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-45"] {
+	width: 45%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-50"] {
+	width: 50%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-55"] {
+	width: 55%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-60"] {
+	width: 60%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-65"] {
+	width: 65%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-70"] {
+	width: 70%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-75"] {
+	width: 75%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-80"] {
+	width: 80%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-85"] {
+	width: 85%;
+}
+[connect|class~=itemBody] [connect|author-class~="percentwidth-10"] {
+	width: 90%;
+}
+
+/* The following has been commented out as it will only work on new GECKO :( */
+/* we have used Javascript instead */
+/*
+.flash {
+	font-weight:bold;
+	background-color:transparent;
+	-moz-animation:flash 4s;
+	animation:flash 4s;
+}
+@-moz-keyframes flash {
+	0%  {background-color: #ABE5FD;}
+	100% {background-color: transparent;}
+}
+@keyframes flash {
+	0%  {background-color: #ABE5FD;}
+	100% {background-color: transparent;}
+}
+*/
+
+.blue { background-color:#E6EFF3; }
+.transparent { background-color:transparent !important; }
+
+[connect|class~=itemBody] img[class~=colour1],
+[connect|class~=itemBody] img[connect|author-class~=colour1],
+[connect|class~=itemBody] svg|svg[connect|author-class~=colour1],
+[connect|class~=itemBody] svg|image[class="colour1"],
+[connect|class~=itemBody] object[connect|author-class~=colour1] {
+	display:block;
+}
+[connect|class~=itemBody] img[class~=colour2],
+[connect|class~=itemBody] img[class~=colour3],
+[connect|class~=itemBody] img[class~=colour4],
+[connect|class~=itemBody] img[connect|author-class~=colour2],
+[connect|class~=itemBody] img[connect|author-class~=colour3],
+[connect|class~=itemBody] img[connect|author-class~=colour4],
+[connect|class~=itemBody] svg|svg[connect|author-class~=colour2],
+[connect|class~=itemBody] svg|svg[connect|author-class~=colour3],
+[connect|class~=itemBody] svg|svg[connect|author-class~=colour4],
+[connect|class~=itemBody] svg|image[class="colour2"],
+[connect|class~=itemBody] svg|image[class="colour3"],
+[connect|class~=itemBody] svg|image[class="colour4"],
+[connect|class~=itemBody] object[connect|author-class~=colour2],
+[connect|class~=itemBody] object[connect|author-class~=colour3],
+[connect|class~=itemBody] object[connect|author-class~=colour4] {
+	display:none;
+}
+
+/* special borders */
+
+[connect|class~=itemBody] div[connect|author-class~=borderNormal] p,
+[connect|class~=itemBody] div[connect|author-class~=borderShadow] p,
+[connect|class~=itemBody] div[connect|author-class~=borderZigzag] p,
+[connect|class~=itemBody] div[connect|author-class~=borderWaveTop] p,
+[connect|class~=itemBody] div[connect|author-class~=borderWaveBottom] p
+{
+	padding: 0;
+	margin: 0;
+}
+
+[connect|class~=itemBody] div[connect|author-class~=borderNormal], [connect|class~=itemBody] div[connect|author-class~=borderShadow], [connect|class~=itemBody] div[connect|author-class~=borderZigzag], [connect|class~=itemBody] div[connect|author-class~=borderWaveTop], [connect|class~=itemBody] div[connect|author-class~=borderWaveBottom] {
+	border: 1px solid #000;
+	padding: 0.857em 1em;
+	margin-bottom: 1em;
+	position: relative;
+	-moz-border-radius: 0.45em;
+	border-radius: 0.45em;
+}
+[connect|class~=itemBody] div[connect|author-class~=borderShadow] {
+	-moz-box-shadow: 0px 0px 1px 3px #888;
+	box-shadow: 0px 0px 1px 3px #888;
+	margin: 1.3em 4px 1.3em 4px;
+}
+[connect|class~=itemBody] div[connect|author-class~=borderZigzag] {
+	-moz-border-radius: 0;
+	border-radius: 0;
+	margin-bottom: 1.5em;
+}
+[connect|class~=itemBody] div[connect|author-class~=borderZigzag], [connect|class~=itemBody] div[connect|author-class~=borderWaveBottom] { border-bottom:0; }
+[connect|class~=itemBody] div[connect|author-class~=borderZigzag]:after, [connect|class~=itemBody] div[connect|author-class~=borderWaveTop]:after, [connect|class~=itemBody] div[connect|author-class~=borderWaveBottom]:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+[connect|class~=itemBody] div[connect|author-class~=borderZigzag]:after {
+	bottom: -5px;
+	-moz-border-image: url("../images/borderZigzag.png") 0 0 6 0 / 0 0 6px 0  repeat;
+	border-image: url("../images/borderZigzag.png") 0 0 6 0 / 0 0 6px 0  repeat;
+}
+[connect|class~=itemBody] div[connect|author-class~=borderWaveTop] {
+	border-top: 0;
+	margin-top: 1.8em;
+}
+[connect|class~=itemBody] div[connect|author-class~=borderWaveTop]:after {
+	top: -10px;
+	-moz-border-image: url("../images/borderWaveTop.png") 15 0 0 0 / 15px 0 0 0  stretch;
+	border-image: url("../images/borderWaveTop.png") 15 0 0 0 / 15px 0 0 0  stretch;
+}
+[connect|class~=itemBody] div[connect|author-class~=borderWaveBottom] { margin-bottom:1.8em; }
+[connect|class~=itemBody] div[connect|author-class~=borderWaveBottom]:after {
+	bottom: -10px;
+	-moz-border-image: url("../images/borderWaveBottom.png") 0 0 15 0 / 0 0 15px 0  stretch;
+	border-image: url("../images/borderWaveBottom.png") 0 0 15 0 / 0 0 15px 0  stretch;
+}
+
+[connect|class~=itemBody] div[connect|author-class~=doubleBottomMargin] {
+	margin-bottom: 3.428em;
+	z-index: 50;
+}
+
+[connect|class~=itemBody] p[connect|author-class~=doubleBottomMargin] {
+	margin-bottom: 1em;
+	z-index: 50;
+}
+
+[connect|class~=itemBody] span.ylw-hglted {
+	background-color: #ff0;
+	position: relative;
+}
+
+[connect|class~=itemBody] .ylw-hglted span.notesIcon {
+	z-index: 40;
+	display:block;
+	width: 9px;
+	height: 9px;
+	position:absolute;
+	top:-0.4em;
+	right:0;
+	background:url("../images/iconNotes.png") no-repeat left top;
+}
+
+[connect|class~=itemBody] p span.input.expandable { padding: 0 2em; }
+
+[connect|class~=itemBody] p.central {
+	display: inline-block;
+	margin: 0.5em auto 1em auto;
+	text-align: left;
+	font-weight: bold;
+	color: #575757;
+	clear: after;
+}
+
+[connect|class~=itemBody] p[connect|author-class~=leftMargin],
+[connect|class~=itemBody] div[connect|author-class~=leftMargin] {
+	margin-left: 1em;
+}
+
+[connect|class~=itemBody] p[connect|author-class~=gapStimulus] {
+	overflow: hidden;
+	margin-top: 3em;
+}
+
+[connect|class~=itemBody] p[connect|author-class~=gapStimulus] img{
+	float: left;
+	margin-right: 10px;
+}
+
+[connect|class~=itemBody] div[connect|author-class~=svg-interactions-container] {
+    position: relative;
+    display: inline-block;
+}
+[connect|class~=itemBody] div[connect|class~="gapStimulus"][connect|author-class~="align-center"] {
+    text-align: left;
+}
+[connect|class~=itemBody] div[connect|class~="gapStimulus"][connect|author-class~="align-center"] div[connect|author-class~=svg-interactions-container] {
+	margin-right: auto;
+	margin-left: auto;
+    display: block;
+}
+[connect|class~=itemBody] div[connect|author-class~=svg-interactions-container] > p,
+[connect|class~=itemBody] div[connect|author-class~=svg-interactions-container] object {
+	margin: 0;
+	overflow: hidden;
+    display: inline-block;
+}
+[connect|class~=itemBody] div[connect|author-class~=svg-interactions-container] span[connect|class~=gap],
+[connect|class~=itemBody] div[connect|author-class~=svg-interactions-container] span[connect|class~=inlineInteraction] {
+	position: absolute;
+}
+[connect|class~=itemBody] div[connect|author-class~=svg-interactions-container] span[connect|class~=gap] {
+	min-width: 6em;
+}
+
+/*
+ * RTE-authored font sizes
+ * xx-small|x-small|small|medium|large|x-large|xx-large
+ */
+span[connect|author-class~=xx-small] {
+	font-size: 0.7em;
+}
+span[connect|author-class~=x-small] {
+	font-size: 0.8em;
+}
+span[connect|author-class~=small] {
+	font-size: 0.9em;
+}
+span[connect|author-class~=medium] {
+	font-size: 1em;
+}
+span[connect|author-class~=large] {
+	font-size: 1.1em;
+}
+span[connect|author-class~=x-large] {
+	font-size: 1.3em;
+}
+span[connect|author-class~=xx-large] {
+	font-size: 1.6em;
+}
+
+span[connect|author-class~="fs9pt"] {
+    font-size: 0.857em;
+}
+span[connect|author-class~="fs10pt"] {
+    font-size: 0.929em;
+}
+span[connect|author-class~="fs11pt"] {
+    font-size: 1.0em;
+}
+span[connect|author-class~="fs12pt"] {
+    font-size: 1.143em;
+}
+span[connect|author-class~="fs14pt"] {
+    font-size: 1.322em;
+}
+span[connect|author-class~="fs18pt"] {
+    font-size: 1.714em;
+}
+span[connect|author-class~="fs24pt"] {
+    font-size: 2.10em;
+}
+
+span[connect|author-class~=underline] {
+	text-decoration: underline;
+}
+
+/*
+ * RTE custom formats
+ */
+[connect|author-class~="svg-align-center"] {
+	text-align: center;
+}
+[connect|author-class~="align-center"] {
+	text-align: center;
+}
+[connect|author-class~="align-left"] {
+	text-align: left;
+}
+[connect|author-class~="align-right"] {
+	text-align: right;
+}
+[connect|author-class~="align-full"] {
+	text-align: justify;
+}
+[connect|author-class~="block-01"] {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+[connect|author-class~="block-02"] {
+    font-weight: bold;
+    width: 30px;
+    display: inline-block;
+}
+
+/*
+ * Logo Styling
+ */
+
+img.partners {
+    width: 350px;
+    float: right;
+    margin: 12px;
+}
+img.ieltspartners {
+    float: right;
+}
+
+/*
+ * Custom elements
+ */
+
+u {
+	text-decoration: underline;
+}
+
+
+/*
+ * Inherited from CIE development
+ */
+ 
+[connect|author-class~="indentlabel"]  {
+	vertical-align: top !important;
+	display: inline-block !important;
+	margin: 0 !important;
+	width: 3.6% !important;
+}
+
+[connect|author-class~="indentword"]  {
+	vertical-align: top !important;
+	display: inline-block !important;
+	margin: 0 !important;
+	width: 12% !important;
+}
+
+div[connect|author-class~="leftMargin"] {
+	display: inline-block !important;
+	margin-top: 0 !important;
+	width: 84% !important;
+}
+
+div[connect|author-class~="leftMargin"] p {
+	margin-top: 0 !important;
+}
+
+div[connect|author-class~="leftMargin"] table {
+	display: inline-block;
+}
+
+div[connect|author-class~="leftMargin"]>p[connect|author-class~="indentlabel"] + div[connect|author-class~="leftMargin"] {
+	margin-right: 40px !important;
+}

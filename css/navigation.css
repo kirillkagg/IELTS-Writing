@@ -1,0 +1,303 @@
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace connect "http://connect.ucles.org.uk/ns/ConnectDeliveryEngine";
+
+[connect|function~=next], [connect|function~=previous] {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+	background: url("../images/nav-buttons.png") no-repeat left top;
+}
+
+[connect|function~=next] { right: 0; }
+
+[connect|function~=next]:hover,
+[connect|function~=next]:focus {
+    background-position: right top;
+}
+
+[connect|function~=previous] {
+    right: 56px;
+    background-position: left bottom;
+}
+
+[connect|function~=previous]:hover,
+[connect|function~=previous]:focus {
+    background-position: right bottom;
+}
+
+[connect|function~=previous][href=''],
+[connect|function~=previous]:not([href]),
+[connect|function~=next][href=''],
+[connect|function~=next]:not([href]) {
+    display:none;
+}
+
+#review-checkbox {
+    bottom: 0.85em;
+    display: block;
+    left: 0.5em;
+    position: absolute;
+	font-size:0.9em;
+}
+
+#review-checkbox input[connect|function~=mark-for-review] {
+    vertical-align: -0.15em;
+}
+
+#pageIdentifier {
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    background: #333 url(../images/navigation-popup.png) repeat-x left top;
+    border: 1px solid #202020;
+    padding: 3px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    z-index: 3;
+    bottom: 2.9em;
+}
+
+#pageIdentifier p { 
+    margin: 0; 
+    text-align: left;
+}
+
+#pageIdentifier span {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-left: 0.8em solid transparent;
+    border-right: 0.8em solid transparent;
+    border-top: 0.8em solid;
+    border-top-color: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    bottom: -0.9em;
+    left: 50%;
+    margin-left: -0.8em;
+}
+
+#media-player { 
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+#navigation-bar {
+    margin-left: 5.3em;
+    margin-right: 8.3em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	padding-right: 30px
+}
+
+#navigation-bar.minimised {
+	margin-bottom:3px;
+	padding-top: 1.35em;
+}
+
+#navigation-bar.maximised {
+ 	border: 1px solid #fff;
+    border-bottom: 0;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 1.0em;
+    background: rgba(255, 255, 255, 0.25);
+    -moz-border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.5em 0.5em 0 0;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+#navigation-bar [connect|class~=testPart] ul,
+#navigation-bar [connect|class~=testPart] li,
+#navigation-bar [connect|class~=testPart] a {
+    display: block;
+    float: left;
+}
+
+#navigation-bar .part-label,
+#navigation-bar .section-label {
+    float: left;
+    margin-right: 0.2em;
+	margin-top: -0.175em;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    line-height: 2em;
+    font-weight: bold;
+    display : inline;
+}
+
+#navigation-bar .auto-width {
+    width: auto!important;
+    padding: 0 1em;
+}
+
+#navigation-bar.maximised [connect|class~=testPart] ul {
+    margin-right: 0.5em;
+}
+
+#navigation-bar [connect|class~=testPart] ul a {
+	overflow:hidden;
+	color:#fff;
+	position: relative;
+	display:block;
+	background-color: #000;
+    background-image: url("../images/button.png");
+    text-align: center;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#navigation-bar.minimised .part-label { display: none; }
+
+#navigation-bar.minimised [connect|class~=testPart] ul { 
+	margin-right:3px; 
+}
+
+#navigation-bar.minimised [connect|class~=testPart] ul a {
+	margin:3px 1px 0.2em 0;
+	padding-left:1em;
+	width:1em;
+	height:1em;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+#navigation-bar.maximised .part-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #666;
+}
+
+#navigation-bar.maximised .part-label+ul {
+	margin-left: 8em; /* ATTENTION: 8em would be needed for Use Of English! */
+}
+
+#navigation-bar.maximised [connect|class~=testPart] > ul > li { position: relative; }
+
+#navigation-bar.maximised [connect|class~=testPart] > ul > li:last-child:not([connect|class~=assessmentSection]) { 
+	border-top: 2px groove #fff; 
+	padding-top: 5px;
+	width: 100%;
+}
+
+#navigation-bar.maximised [connect|class~=testPart] > ul > li:last-child:not([connect|class~=assessmentSection]) .part-label { padding-top: 5px; }
+
+#navigation-bar.maximised [connect|class~=testPart] ul a {
+    margin-right: 0.143em; /* 2px at font-size: 14px */
+    margin-bottom: 0.5em;
+    border: 1px solid black;
+    width: 1.6em;
+    height: 1.6em;
+    -moz-background-size: contain;
+    background-size: contain;
+    line-height: 1.6em;
+    color: #fff;
+    font-weight: bold;
+	-moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#navigation-bar [connect|class~=testPart]
+        a[connect|state~=completed] span {
+	border-bottom:2px solid #fff;
+	padding:0 2px;
+}
+
+#navigation-bar [connect|class~=testPart]
+	a[connect|state~=completed]:not([connect|state~=current]) span {
+	border-color:#000;
+}
+
+#navigation-bar [connect|class~=testPart]
+        a[connect|state~=completed]:not([connect|state~=current]) {
+    border-color: #fff;
+    background-color: #fff;
+    background-image: url("../images/button-done.png");
+    color: #000;
+}
+
+#navigation-bar.maximised [connect|class~=testPart] a[connect|state~=marked-for-review],
+#navigation-bar.minimised [connect|class~=testPart] a[connect|state~=marked-for-review]:not([connect|state~=current]) {
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+#navigation-bar [connect|class~=testPart] ul a:hover,
+#navigation-bar [connect|class~=testPart] ul a:focus,
+#navigation-bar [connect|class~=testPart] ul a[connect|state~=completed]:not([connect|state~=current]):hover,
+#navigation-bar [connect|class~=testPart] ul a[connect|state~=completed]:not([connect|state~=current]):focus {
+    background-image: none;
+	color: #3bf !important;
+}
+
+#navigation-bar [connect|class~=testPart] ul a[connect|state~=current],
+#navigation-bar [connect|class~=testPart] ul a[connect|state~=current]:hover,
+#navigation-bar [connect|class~=testPart] ul a[connect|state~=current]:focus {
+    border-color: #34b2f1;
+    background-image: url("../images/button-current.png");
+    text-shadow: 0 0 2px #000, 0 0 2px #000;
+}
+
+#navigation-bar.minimised [connect|class~=testPart] ul a[connect|state~=current] {
+	width:0;
+	height:0;
+	z-index:1;
+	margin:0 -2px auto -2px;
+	padding:0 1px 0 0;
+	border-left:0.7em solid transparent;
+	background:none;
+	border-right:0.7em solid transparent;
+	border-top:1.2em solid #1098dc;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	-moz-border-radius:0;
+	border-radius:0;
+}
+
+#navigation-bar.minimised [connect|class~=testPart] ul a[connect|state~=current]:hover
+#navigation-bar.minimised [connect|class~=testPart] ul a[connect|state~=current]:focus { 
+	border-top:1.2em solid #47b7ec; 
+}
+
+/* Hidden from sighted users, but still announced by a screen reader. */
+#navigation-bar.minimised .minimise, #navigation-bar.maximised .maximise, #navigation-bar a.minimise span, #navigation-bar a.maximise span, #navigation-bar.minimised .section-label, #navigation-bar .question-label {
+    position: absolute;
+    display: block;
+    top: auto;
+    left: -100000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#navigation-bar a.no-question {
+    background: none repeat scroll 0 0 #777 !important;
+    border-color: #555;
+}
+
+#navigation-bar .views {
+	position:absolute;
+	bottom:3px;
+	right:3px;
+}
+
+#navigation-bar .minimise {
+	width:28px;
+	height:28px;
+	background:url("../images/iconMinimise.png") no-repeat left top;
+}
+#navigation-bar .maximise {
+	width:28px;
+	height:28px;
+	background:url("../images/iconMaximise.png") no-repeat left top;
+}
