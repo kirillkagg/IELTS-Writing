@@ -1,6 +1,6 @@
 # IELTS-Writing
 
-Welcome to Typist, here you can improve your IELTS writing skills with our specially designed training program. Our program is tailored to help you achieve your desired band score in the writing section of the IELTS exam. With our program, you'll develop the skills you need to succeed in the IELTS exam and beyond. Don't let the writing section hold you back - press the button below and take your writing to the next level!
+Welcome to IELTS-Writing, here you can improve your IELTS writing skills with our specially designed training program. Our program is tailored to help you achieve your desired band score in the writing section of the IELTS exam. With our program, you'll develop the skills you need to succeed in the IELTS exam and beyond. Don't let the writing section hold you back - press the button below and take your writing to the next level!
 
 ## Usage
 
